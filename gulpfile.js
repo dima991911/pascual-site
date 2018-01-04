@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    babel = require('gulp-babel'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     cssmin = require('gulp-minify-css'),
@@ -25,16 +26,23 @@ var path = {
         html: 'src/*.html',
         js: [
             'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/slick-carousel/slick/slick.min.js',
             'src/js/*.js'
         ],
         style: [
             'node_modules/bootstrap/dist/css/bootstrap.min.css',
+            'node_modules/slick-carousel/slick/slick.css',
+            'node_modules/slick-carousel/slick/slick-theme.css',
+            'node_modules/font-awesome/css/font-awesome.min.css',
             'src/css/style.scss'
         ],
         img: [
             'src/img/**/*.*'
         ],
         fonts: [
+            'node_modules/font-awesome/fonts/fontawesome-webfont.otf',
+            'node_modules/font-awesome/fonts/fontawesome-webfont.eot',
+            'node_modules/font-awesome/fonts/fontawesome-webfont.ttf',
             'src/fonts/**/*.*'
         ]
     },
@@ -67,6 +75,9 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     return gulp.src(path.src.js)
         .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
