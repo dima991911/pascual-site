@@ -14,26 +14,62 @@
 </head>
 <body>
 
+    <!----------Header fixed----------->
+
+    <header class="header header-fixed">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 header-logo">
+                    <img src="assets/img/logo.png" alt="Logo" class="header-logo__img">
+                </div>
+                <div class="col-sm-8 header-navigation">
+                    <nav class="nav-fixed">
+                        <a href="#about" data-scroll class="header-navigation__item">PARKING</a>
+                        <a href="#service" data-scroll class="header-navigation__item">SERVICIO</a>
+                        <a href="#selling" data-scroll class="header-navigation__item">VENTA</a>
+                        <a href="#contact" data-scroll class="header-navigation__item">CONTACTOS</a>
+                    </nav>
+                </div>
+                <div class="col-sm-2 header-language">
+                    <a href="#" class="header-language__a">ESP</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-------------------Hamburger icon------------------>
+
+    <div class="hamburger-icon">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <!----------------------Mobile Menu------------------------>
+
+    <div class="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="#about" data-scroll class="mobile-nav-item">PARKING</a>
+            <a href="#service" data-scroll class="mobile-nav-item">SERVICIO</a>
+            <a href="#selling" data-scroll class="mobile-nav-item">VENTA</a>
+            <a href="#contact" data-scroll class="mobile-nav-item">CONTACTOS</a>
+        </nav>
+    </div>
+
     <section class="section-top">
         <header class="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 header-logo">
+                    <div class="col-sm-2 header-logo">
                         <img src="assets/img/logo.png" alt="Logo" class="header-logo__img">
                     </div>
-                    <div class="col-md-6 header-navigation">
+                    <div class="col-sm-8 header-navigation">
                         <nav class="">
-                            <a href="#" class="header-navigation__item">PARKING</a>
-                            <a href="#" class="header-navigation__item">SERVICIO</a>
-                            <a href="#" class="header-navigation__item">VENTA</a>
-                            <a href="#" class="header-navigation__item">CONTACTOS</a>
+                            <a href="#about" data-scroll class="header-navigation__item">PARKING</a>
+                            <a href="#service" data-scroll class="header-navigation__item">SERVICIO</a>
+                            <a href="#selling" data-scroll class="header-navigation__item">VENTA</a>
+                            <a href="#contact" data-scroll class="header-navigation__item">CONTACTOS</a>
                         </nav>
                     </div>
-                    <div class="col-md-3 header-language">
-                        <!--<select class="header-language__select">
-                            <option selected value="es">ESP</option>
-                            <option value="en">ENG</option>
-                        </select>-->
+                    <div class="col-sm-2 header-language">
                         <a href="#" class="header-language__a">ESP</a>
                     </div>
                 </div>
@@ -56,7 +92,7 @@
 
         <!----------About----------->
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 about-parking">
@@ -73,11 +109,11 @@
 
         <!---------------Services------------>
 
-        <section class="services">
+        <section class="services" id="service">
             <div class="container">
                 <div class="row services-block">
                     <h2 class="services-block__h2">SERVICIO DE PARKING CARAVANING PASCUAL</h2>
-                    <div class="col-sm-6 service-item">
+                    <div class="col-md-6 service-item">
                         <div>
                             <img src="assets/img/caravan_service.jpg" alt="Caravan" class="service-item__img">
                         </div>
@@ -85,18 +121,18 @@
                             PARKING EXTERIOR
                         </h4>
                         <div class="row">
-                            <div class="col-md-8 service-bottom__price">250 &#8364/ano</div>
-                            <div class="col-md-4 service-bottom__btn"><div class="selling-details">GALERIA</div></div>
+                            <div class="col-xs-7 service-bottom__price">250 &#8364/ano</div>
+                            <div class="col-xs-5 service-bottom__btn"><div class="selling-details">GALERIA</div></div>
                         </div>
                     </div>
-                    <div class="col-sm-6 service-item">
+                    <div class="col-md-6 service-item">
                         <img src="assets/img/caravan_service.jpg" alt="Caravan" class="service-item__img">
                         <h4 class="service-item__name">
                             PARKING EXTERIOR
                         </h4>
                         <div class="row">
-                            <div class="col-md-8 service-bottom__price">250 &#8364/ano</div>
-                            <div class="col-md-4 service-bottom__btn"><div class="selling-details">GALERIA</div></div>
+                            <div class="col-xs-7 service-bottom__price">250 &#8364/ano</div>
+                            <div class="col-xs-5 service-bottom__btn"><div class="selling-details">GALERIA</div></div>
                         </div>
                     </div>
                 </div>
@@ -115,10 +151,10 @@
                         </header>
                         <div class="we-item">  <!--block for preferer-->
                             <div class="row">
-                                <div class="col-md-2 we-icon">
+                                <div class="col-xs-4 we-icon">
                                     <img src="assets/img/reparaciones.svg" alt="icon" class="we-item__img">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-xs-8">
                                     <div class="we-item__description">
                                         <h5>REPARACIONES</h5>
                                         <p>Hacemos reparaciones para los clientes de nuestro parking caravaning.</p>
@@ -128,10 +164,10 @@
                         </div>
                         <div class="we-item">  <!--block for preferer-->
                             <div class="row">
-                                <div class="col-md-2 we-icon">
+                                <div class="col-xs-4 we-icon">
                                     <img src="assets/img/drop.svg" alt="icon" class="we-item__img">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-xs-8">
                                     <div class="we-item__description">
                                         <h5>LAVADO EXTERIOR</h5>
                                         <p>Ofrecemos un servicio integral de lavado de toda <br> la caravana.</p>
@@ -141,10 +177,10 @@
                         </div>
                         <div class="we-item">  <!--block for preferer-->
                             <div class="row">
-                                <div class="col-md-2 we-icon">
+                                <div class="col-xs-4 we-icon">
                                     <img src="assets/img/seguro.svg" alt="icon" class="we-item__img">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-xs-8">
                                     <div class="we-item__description">
                                         <h5>SEGURO INCLUÍDO</h5>
                                         <p>Ofrecemos un seguro incluído en todos los precios de estancia para cuando la caravana está en nuestro parking</p>
@@ -154,10 +190,10 @@
                         </div>
                         <div class="we-item">  <!--block for preferer-->
                             <div class="row">
-                                <div class="col-md-2 we-icon">
+                                <div class="col-xs-4 we-icon">
                                     <img src="assets/img/engrase.svg" alt="icon" class="we-item__img">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-xs-8">
                                     <div class="we-item__description">
                                         <h5>ENGRASE</h5>
                                         <p>Engrasamos los pies estabilizadores y todos los puntos de engrase de la caravana.</p>
@@ -167,10 +203,10 @@
                         </div>
                         <div class="we-item">  <!--block for preferer-->
                             <div class="row">
-                                <div class="col-md-2 we-icon">
+                                <div class="col-xs-4 we-icon">
                                     <img src="assets/img/camera.svg" alt="icon" class="we-item__img">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-xs-8">
                                     <div class="we-item__description">
                                         <h5>CÁMARAS DE VIDEOVIGILANCIA</h5>
                                         <p>24 horas de <br> videovigilancia.</p>
@@ -180,10 +216,10 @@
                         </div>
                         <div class="we-item">  <!--block for preferer-->
                             <div class="row">
-                                <div class="col-md-2 we-icon">
+                                <div class="col-xs-4 we-icon">
                                     <img src="assets/img/transport.svg" alt="icon" class="we-item__img">
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-xs-8">
                                     <div class="we-item__description">
                                         <h5>TRANSPORTES</h5>
                                         <p>Transportamos su caravana <br> al camping y viceversa.</p>
@@ -198,19 +234,19 @@
 
         <!----------Buy Caravan SECTION------------>
 
-        <section class="selling">
+        <section class="selling" id="selling">
             <div class="container">
                 <div class="row selling-section">
                     <h3 class="selling-section__h3">VENTA DE CARAVANAS</h3>
                     <div class="col-md-6 selling-caravan-margin">
                         <div class="selling-caravan">
                             <div class="selling-caravan-avatar">
-                                <img src="assets/img/caravan_selling.jpg" class="selling-caravan__img" alt="Caravan">
+                                <img src="assets/img/caravan1.jpg" class="selling-caravan__img" alt="Caravan">
                                 <h6>CARAVANA HOBBY</h6>
                             </div>
                             <div class="row">
-                                <div class="col-md-8 selling-price">2.000 &#8364;</div>
-                                <div class="col-md-4"><div class="selling-details">DETAILS</div></div>
+                                <div class="col-xs-7 selling-price">2.000 &#8364;</div>
+                                <div class="col-xs-5"><div class="selling-details">DETAILS</div></div>
                             </div>
                         </div>
                     </div>
@@ -221,8 +257,8 @@
                                 <h6>CARAVANA HOBBY</h6>
                             </div>
                             <div class="row">
-                                <div class="col-md-8 selling-price">2.000 &#8364;</div>
-                                <div class="col-md-4"><div class="selling-details">DETAILS</div></div>
+                                <div class="col-xs-7 selling-price">2.000 &#8364;</div>
+                                <div class="col-xs-5"><div class="selling-details">DETAILS</div></div>
                             </div>
                         </div>
                     </div>
@@ -233,8 +269,8 @@
                                 <h6>CARAVANA HOBBY</h6>
                             </div>
                             <div class="row">
-                                <div class="col-md-8 selling-price">2.000 &#8364;</div>
-                                <div class="col-md-4"><div class="selling-details">DETAILS</div></div>
+                                <div class="col-xs-7 selling-price">2.000 &#8364;</div>
+                                <div class="col-xs-5"><div class="selling-details">DETAILS</div></div>
                             </div>
                         </div>
                     </div>
@@ -245,8 +281,8 @@
                                 <h6>CARAVANA HOBBY</h6>
                             </div>
                             <div class="row">
-                                <div class="col-md-8 selling-price">2.000 &#8364;</div>
-                                <div class="col-md-4"><div class="selling-details">DETAILS</div></div>
+                                <div class="col-xs-7 selling-price">2.000 &#8364;</div>
+                                <div class="col-xs-5"><div class="selling-details">DETAILS</div></div>
                             </div>
                         </div>
                     </div>
@@ -261,52 +297,52 @@
 
         <!-------------Contact SECTION-------------->
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <div class="row contact-section">
                     <h3 class="contact-section__h3">CONTACTOS</h3>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-xs-12">
                         <div class="contact-item">
                             <div class="row">
-                                <div class="col-md-1 contact-item__icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <div class="col-md-11 contact-item__text">17258, L’Estartit (Girona), Spain <br>
+                                <div class="col-xs-2 contact-item__icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                <div class="col-xs-10 contact-item__text">17258, L’Estartit (Girona), Spain <br>
                                     <span class="text_italica">42.047711"N 3.174757"E</span></div>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="row">
-                                <div class="col-md-1 contact-item__icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <div class="col-md-11 contact-item__text"><a href="tel:+3463624338">(+34) 636 243 388</a>
+                                <div class="col-xs-2 contact-item__icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                                <div class="col-xs-10 contact-item__text"><a href="tel:+3463624338">(+34) 636 243 388</a>
                                     <br><span class="text_italica">(en Castellano)</span></div>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="row">
-                                <div class="col-md-1 contact-item__icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <div class="col-md-11 contact-item__text"><a href="tel:+34654925503">(+34) 654 925 503 </a><br><span class="text_italica">(en Ingles)</span></div>
+                                <div class="col-xs-2 contact-item__icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                                <div class="col-xs-10 contact-item__text"><a href="tel:+34654925503">(+34) 654 925 503 </a><br><span class="text_italica">(en Ingles)</span></div>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="row">
-                                <div class="col-md-1 contact-item__icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
-                                <div class="col-md-11 contact-item__text"><a href="#">www.parkingcaravanaspascual.com</a></div>
+                                <div class="col-xs-2 contact-item__icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+                                <div class="col-xs-10 contact-item__text"><a href="#">www.parkingcaravanaspascual.com</a></div>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="row">
-                                <div class="col-md-1 contact-item__icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                                <div class="col-md-11 contact-item__text"><a href="mailto:parkingcaravanaspascual@gmail.com">parkingcaravanaspascual@gmail.com</a></div>
+                                <div class="col-xs-2 contact-item__icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                <div class="col-xs-10 contact-item__text"><a href="mailto:parkingcaravanaspascual@gmail.com">parkingcaravanaspascual@gmail.com</a></div>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="row">
-                                <div class="col-md-1 contact-item__icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                                <div class="col-md-11 contact-item__text">
+                                <div class="col-xs-2 contact-item__icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                <div class="col-xs-10 contact-item__text">
                                     8:30h - 20:00h (cada dia)</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6"> <!----------------Form feedback------------------>
+                    <div class="col-md-6 col-xs-12"> <!----------------Form feedback------------------>
                         <form name="feedback" class="feedback">
                             <div class="feedback-group">
                                 <input type="text" placeholder="Nombre" class="feedback-group__input">
@@ -325,9 +361,11 @@
                             </div>
                         </form>
                     </div>
-                    <h3 class="contact-localizacion__h3">
-                        LOCALIZACION
-                    </h3>
+                    <div class="col-md-12">
+                        <h3 class="contact-localizacion__h3">
+                            LOCALIZACION
+                        </h3>
+                    </div>
                     <div class="col-md-12" id="map">
 
                     </div>
@@ -343,10 +381,10 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 footer-copyright">
+                <div class="col-xs-8 footer-copyright">
                     <p>© 2008-2018 Parking Caravanas Pascual</p>
                 </div>
-                <div class="col-md-6 footer-logo"><img src="assets/img/logo_white.svg" alt="Logo"></div>
+                <div class="col-xs-4 footer-logo"><img src="assets/img/logo_white.svg" alt="Logo"></div>
             </div>
         </div>
     </footer>
@@ -354,6 +392,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/bpopup.js"></script>
+    <script src="assets/js/smooth-scroll.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6OteSbFlfYJ3CmJQxQXoPmFBJadNwwIk&callback=Module.initMap"></script>
     <script src="assets/js/main.js"></script>
 </body>

@@ -9,6 +9,7 @@
 .header {
   $padding: 10px;
   $width_img: 40px;
+  z-index: 1000;
 
   padding: $padding 0;
 
@@ -67,4 +68,74 @@
       font-size: 70px;
     }
   }
+}
+
+/*-----Header fixed----*/
+
+.header-fixed {
+  display: none;
+  background: rgba(0,0,0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.active-item {
+  color: $dark-blue;
+}
+
+/*--------------Header Mobile------------*/
+
+.mobile {
+  &-menu {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+
+  &-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    a {
+      display: block;
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+      background: black;
+      color: $gray;
+      font-size: 25px;
+      transition: 0.2s;
+      border-bottom: 1px solid $gray;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+
+/*-----Hamburger icon----*/
+
+.hamburger-icon {
+  display: none;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  font-size: 50px;
+  color: $orange;
+  cursor: pointer;
 }

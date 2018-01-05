@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
     sass = require('gulp-sass'),
+    pxtorem = require('gulp-pxtorem'),
     sourcemaps = require('gulp-sourcemaps'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
@@ -27,6 +28,7 @@ var path = {
         js: [
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/slick-carousel/slick/slick.min.js',
+            'node_modules/smooth-scroll/dist/js/smooth-scroll.min.js',
             'src/js/*.js'
         ],
         style: [
@@ -89,6 +91,7 @@ gulp.task('style:build', function () {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(prefixer())
+        .pipe(pxtorem())
         .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.style))

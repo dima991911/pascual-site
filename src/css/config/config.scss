@@ -24,6 +24,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 html {
+  overflow-x: hidden;
   font-size: 16px;
 }
 
@@ -33,6 +34,7 @@ body {
   background: $blue;
   font-family: Arial;
   letter-spacing: 1.1px;
+  position: relative;
 }
 ol, ul {
   list-style: none;

@@ -23,6 +23,7 @@
     &__name {
       position: absolute;
       font-size: 24px;
+      text-align: center;
       left: 50%;
       top: 10%;
       transform: translateX(-50%);
@@ -32,7 +33,7 @@
   &-bottom {
     &__price {
       font-size: 30px;
-      text-align: right;
+      text-align: center;
     }
 
     &__btn {

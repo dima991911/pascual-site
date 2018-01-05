@@ -1,0 +1,32 @@
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .name {
+    margin-bottom: -20px;
+  }
+
+  .content-top {
+    transform: translateY(0);
+  }
+
+  .about-parking {
+    background: $gray;
+    padding: 20px;
+  }
+
+  .header {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .hamburger-icon {
+    display: block;
+    z-index: 1001;
+  }
+
+  .name {
+    margin-top: -50px;
+  }
+}
