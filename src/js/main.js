@@ -7,9 +7,15 @@ var Module = (function () {
     var setupListener = function () {
         $(document).scroll(scrollHeader);
         $(window).resize(mobileMenuLaptop);
-        scrollInit();
         $('.hamburger-icon').click(menuHamburger);
         $('.mobile-nav-item').click(menuMobileItem);
+        $('.selling-more__btn').click(moreCaravan);
+        $('.selling-details').click(clickGallery);
+        scrollInit();
+        $('.fancybox').fancybox({
+            openEffect	: 'none',
+            closeEffect	: 'none'
+        });
     };
 
     /*---------Google Map----------*/
@@ -59,8 +65,20 @@ var Module = (function () {
         });
     };
 
-    /*-----------------Hamburger menu click---------------------------*/
+    /*------------------------See mode Caravan for selling---------------------*/
+    var moreCaravan = function () {
+        var caravanHide = $('.selling-caravan__none');
 
+        for(var i = 0; i < 4; i++) {
+            if(caravanHide[i]) {
+                $(caravanHide[i]).removeClass('selling-caravan__none');
+            } else {
+                break;
+            }
+        }
+    };
+
+    /*-----------------Hamburger menu click---------------------------*/
     var menuHamburger = function () {
         var mobileMenu = '.hamburger-icon',
             nav = $('.mobile-menu'),
@@ -78,7 +96,6 @@ var Module = (function () {
     };
 
     /*----------Click Hamburger menu item---------*/
-
     var menuMobileItem = function () {
         var navMenu = $('.mobile-menu'),
             hamburgerIcon = $('.hamburger-icon i'),
@@ -107,6 +124,12 @@ var Module = (function () {
         var scroll =  new SmoothScroll('a[href*="#"]');
     };
 
+    /*----------------Click Gallery-------------*/
+    var clickGallery = function () {
+        var gallery = $('.gallery a')[0];
+
+        $(gallery).trigger('click');
+    };
 
     /*---------------------------Return method----------------------------*/
     return {

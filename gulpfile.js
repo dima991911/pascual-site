@@ -27,14 +27,13 @@ var path = {
         html: 'src/*.html',
         js: [
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/slick-carousel/slick/slick.min.js',
             'node_modules/smooth-scroll/dist/js/smooth-scroll.min.js',
+            'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
             'src/js/*.js'
         ],
         style: [
             'node_modules/bootstrap/dist/css/bootstrap.min.css',
-            'node_modules/slick-carousel/slick/slick.css',
-            'node_modules/slick-carousel/slick/slick-theme.css',
+            'node_modules/fancybox/dist/css/jquery.fancybox.css',
             'node_modules/font-awesome/css/font-awesome.min.css',
             'src/css/style.scss'
         ],
