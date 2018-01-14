@@ -1,0 +1,41 @@
+$blue: #25223D;
+$white: #F7F7F8;
+$gray: #E6E6E6;
+$dark-blue: #282744;
+$orange: #FE8B00;
+
+/*Settings*/
+@import "config/config";
+
+/*Import mixins*/
+@import "mixins/mixins";
+
+// transform top
+@import "template/transform-top";
+
+/*Import template*/
+
+// header section
+@import "template/header";
+// about section
+@import "template/about";
+// servicec section
+@import "template/services";
+// We section
+@import "template/we";
+// selling section
+@import "template/selling";
+//contacts section
+@import "template/contacts";
+// feedback form
+@import "template/feedback-form";
+// footer section
+@import "template/footer";
+// Detail Modal
+@import "template/detail-modal";
+
+// Media Screen ------------
+@import "media/media-992";
+@import "media/media-768";
+@import "media/media-550";
+@import "media/media-420";

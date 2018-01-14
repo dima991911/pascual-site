@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    browserfiy = require('gulp-browserify'),
     babel = require('gulp-babel'),
     sass = require('gulp-sass'),
     pxtorem = require('gulp-pxtorem'),
@@ -12,65 +13,83 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     browserSync = require("browser-sync"),
+    jeditor = require("gulp-json-editor"),
     rimraf = require('rimraf'),
     reload = browserSync.reload;
 
 var path = {
     build: {
-        html: 'build/',
-        js: 'build/assets/js/',
-        style: 'build/assets/css/',
-        img: 'build/assets/img/',
-        fonts: 'build/assets/fonts/'
+        html: 'public/',
+        js: 'public/assets/js/',
+        style: 'public/assets/css/',
+        img: 'public/assets/img/',
+        fonts: 'public/assets/fonts/'
     },
     src: {
-        html: 'src/*.html',
+        html: 'resources/*.html',
         js: [
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/smooth-scroll/dist/js/smooth-scroll.min.js',
+            'node_modules/owl.carousel/dist/owl.carousel.min.js',
             'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
-            'src/js/*.js'
+            'resources/assets/js/*.js'
         ],
         style: [
             'node_modules/bootstrap/dist/css/bootstrap.min.css',
             'node_modules/fancybox/dist/css/jquery.fancybox.css',
+            'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+            'node_modules/owl.carousel/dist/assets/owl.theme.default.css',
             'node_modules/font-awesome/css/font-awesome.min.css',
-            'src/css/style.scss'
+            'resources/assets/css/style.scss',
+            'resources/assets/css/*.css'
         ],
         img: [
-            'src/img/**/*.*'
+            'resources/assets/img/**/*.*'
         ],
         fonts: [
             'node_modules/font-awesome/fonts/fontawesome-webfont.otf',
             'node_modules/font-awesome/fonts/fontawesome-webfont.eot',
             'node_modules/font-awesome/fonts/fontawesome-webfont.ttf',
-            'src/fonts/**/*.*'
-        ]
+            'node_modules/font-awesome/fonts/fontawesome-webfont.woff',
+            'node_modules/font-awesome/fonts/fontawesome-webfont.woff2',
+            'resources/assets/fonts/**/*.*'
+        ],
+        json: 'resources/assets/js/*.json'
     },
     watch: {
-        html: 'src/*.html',
-        js: 'src/js/*.js',
-        style: 'src/css/**/*.scss',
-        img: 'src/img/*.*',
-        fonts: 'src/fonts/*.*'
+        html: 'resource/assets/*.html',
+        js: 'resource/assets/js/*.js',
+        style: 'resource/assets/css/**/*.scss',
+        img: 'resource/assets/img/*.*',
+        fonts: 'resource/assets/fonts/*.*',
+        json: 'resource/assets/js/*.json'
     },
-    clean: './build'
+    clean: './public/assets'
 }
 
 var config = {
     server: {
         baseDir: './build'
     },
+    open: true,
     tunnel: true,
     host: 'localhost',
     port: 9000,
     logPrefix: 'Frontend_Devil'
 };
 
-gulp.task('html:build', function () {
+/*gulp.task('html:build', function () {
     return gulp.src(path.src.html)
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
+});*/
+
+gulp.task('json:build', function () {
+    return gulp.src(path.src.json)
+        .pipe(jeditor({
+            'version': '1.2.3'
+        }))
+        .pipe(gulp.dest(path.build.js));
 });
 
 gulp.task('js:build', function () {
@@ -115,17 +134,18 @@ gulp.task('fonts:build', function() {
 });
 
 gulp.task('build', [
-    'html:build',
+    /*'html:build',*/
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+    'json:build'
 ]);
 
 gulp.task('watch', function(){
-    watch(path.watch.html, function(event, cb) {
+    /*watch(path.watch.html, function(event, cb) {
         gulp.start('html:build');
-    });
+    });*/
     watch(path.watch.style, function(event, cb) {
         gulp.start('style:build');
     });
@@ -138,14 +158,17 @@ gulp.task('watch', function(){
     watch(path.watch.fonts, function(event, cb) {
         gulp.start('fonts:build');
     });
+    watch(path.watch.json, function (event, cb) {
+        gulp.start('json:build');
+    })
 });
 
-gulp.task('webserver', function () {
+/*gulp.task('webserver', function () {
     browserSync(config);
-});
+});*/
 
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('default', ['build', /*'webserver',*/ 'watch']);

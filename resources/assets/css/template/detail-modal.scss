@@ -1,0 +1,130 @@
+.lock {
+  overflow: hidden;
+}
+
+
+/*-----------------Design Scrolbar----------------*/
+.modal-content::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.modal-content::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+.modal-content::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0, 0.3);
+  background-color: $orange;
+}
+
+.modal {
+
+  &-details {
+    padding: 5% 0;
+    display: none;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  &-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    padding: 20px 30px;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    background: $gray;
+    color: $dark-blue;
+
+    &__close {
+      color: $orange;
+      position: absolute;
+      font-size: 44px;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      z-index: 1003;
+    }
+  }
+
+  &-price {
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    h4 {
+      font-size: 20px;
+    }
+
+    &__price {
+      text-align: center;
+      z-index: 1005;
+      font-size: 18px;
+    }
+  }
+
+  &-slider {
+    width: 80%;
+    margin: 0 auto;
+
+    li {
+      min-height: 300px;
+    }
+  }
+
+  &-info {
+    margin-top: 20px;
+    color: $dark-blue;
+    line-height: 1.3;
+
+    &-item {
+      margin-bottom: 15px;
+
+      &__name {
+        font-weight: bold;
+      }
+      &__value {
+        font-size: 16px;
+      }
+    }
+
+    &-description {
+      padding: 0 10px;
+
+      h5 {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+// Carousel Modal window
+
+#owl-demo .item img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 400px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+#owl-demo .item {
+  overflow: hidden;
+  border-radius: 5px;
+}

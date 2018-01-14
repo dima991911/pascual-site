@@ -1,0 +1,12 @@
+.footer {
+  color: $gray;
+  padding: 5px 0;
+
+  &-copyright {
+    line-height: 90px;
+  }
+
+  &-logo {
+    text-align: right;
+  }
+}

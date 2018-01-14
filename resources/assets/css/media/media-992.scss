@@ -1,0 +1,30 @@
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+
+  .about-parking {
+    padding: 20px 10px;
+  }
+
+  .service-item {
+    margin-bottom: 30px;
+  }
+
+  .we-section {
+    background: $gray;
+  }
+
+  .carousel {
+    width: 80%;
+  }
+
+  #owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: inherit;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+}

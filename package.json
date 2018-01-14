@@ -12,8 +12,11 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
+    "bxslider": "^4.2.13",
+    "flexslider": "^2.6.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
+    "owl.carousel": "^2.2.0",
     "smooth-scroll": "^12.1.5"
   },
   "devDependencies": {
@@ -26,9 +29,11 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
+    "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.0",
     "gulp-imagemin": "^4.0.0",
+    "gulp-json-editor": "^2.2.1",
     "gulp-minify-css": "^1.2.4",
     "gulp-pxtorem": "^3.0.0",
     "gulp-sass": "^3.1.0",
@@ -36,6 +41,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
     "imagemin-pngquant": "^5.0.1",
+    "proxy-middleware": "^0.15.0",
     "rimraf": "^2.6.2"
   }
 }
