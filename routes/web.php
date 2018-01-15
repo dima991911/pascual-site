@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => 'HomeController@index',
+    'as' => 'index'
+]);
+
+Route::post('/submit-email', [
+    'uses' => 'FormController@submitEmail',
+    'as' => 'send.email'
+]);
+
+Route::get('/change-language', [
+    'uses' => 'HomeController@changeLanguage',
+    'as' => 'change.language'
+]);

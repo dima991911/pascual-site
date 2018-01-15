@@ -21,6 +21,15 @@
       padding: 5px 35px;
       font-weight: bold;
     }
+
+    &__error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    &__none {
+      display: none;
+    }
   }
 
   &-btn {

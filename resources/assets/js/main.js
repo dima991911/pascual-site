@@ -16,7 +16,6 @@ var Module = (function () {
             openEffect	: 'none',
             closeEffect	: 'none'
         });
-        console.log("DIma");
     };
 
     /*---------Google Map----------*/

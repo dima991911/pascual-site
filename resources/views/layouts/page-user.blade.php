@@ -9,7 +9,26 @@
     @yield('styles')
 </head>
 <body>
-    @yield('content')
+
+    @include('includes.header') {{--Header(Menu fixed, Header, Menu for mobile)--}}
+
+    <div class="content-top"> {{--Content top 100px--}}
+
+        @include('includes.about') {{--About--}}
+
+        @include('includes.services') {{--Our Services--}}
+
+        @yield('caravanSelling')
+
+        @include('includes.contact')
+
+        @include('includes.gallery')
+
+        @include('includes.modal-window')
+
+    </div>
+
+    @include('includes.footer')
 
     @yield('scripts')
 </body>

@@ -18,12 +18,6 @@ var DetailsModal = (function () {
             autoHeight: true,
             dots: true
         });
-
-        function arg() {
-            console.log([].join.call(arguments, ', '));
-        };
-
-        arg('Dima', 'Vadym', 'Olesya');
     };
 
     /*-------------------Show Modal Window Details Caravan--------------------*/
