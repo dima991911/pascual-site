@@ -528,7 +528,6 @@
 @section('scripts')
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.fancybox.pack.js"></script>
-    <script src="assets/js/jquery.flexslider.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/bpopup.js"></script>
     <script src="assets/js/smooth-scroll.min.js"></script>

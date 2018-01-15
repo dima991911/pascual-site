@@ -57,19 +57,19 @@ var path = {
         json: 'resources/assets/js/*.json'
     },
     watch: {
-        html: 'resource/assets/*.html',
-        js: 'resource/assets/js/*.js',
-        style: 'resource/assets/css/**/*.scss',
-        img: 'resource/assets/img/*.*',
-        fonts: 'resource/assets/fonts/*.*',
-        json: 'resource/assets/js/*.json'
+        html: 'resources/assets/*.html',
+        js: 'resources/assets/js/*.js',
+        style: 'resources/assets/css/**/*.scss',
+        img: 'resources/assets/img/*.*',
+        fonts: 'resources/assets/fonts/*.*',
+        json: 'resources/assets/js/*.json'
     },
     clean: './public/assets'
 }
 
 var config = {
     server: {
-        baseDir: './build'
+        baseDir: './public'
     },
     open: true,
     tunnel: true,
