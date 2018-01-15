@@ -503,7 +503,7 @@
                     <div class="col-md-5 col-sm-12 modal-info-description">
                         <h5>Description</h5>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque deleniti eligendi, illo iusto magni nisi nulla perspiciatis rem sapiente! Commodi deserunt laudantium nulla quo sunt. Aspernatur expedita explicabo iste odit saepe sequi temporibus! Aperiam doloremque earum eos explicabo nostrum praesentium quasi quisquam! Minima nisi obcaecati, repellat rerum tempore temporibus.
+                            Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque deleniti eligendi, illo iusto magni nisi nulla perspiciatis rem sapiente! Commodi deserunt laudantium nulla quo sunt. Aspernatur expedita explicabo iste odit saepe sequi temporibus! Aperiam doloremque earum eos explicabo nostrum praesentium quasi quisquam! Minima nisi obcaecati, repellat rerum tempore temporibus.
                         </p>
                     </div>
                 </div>
