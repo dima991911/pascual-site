@@ -34,8 +34,10 @@ body {
   background: $blue;
   font-family: Arial;
   letter-spacing: 1.1px;
+  overflow-x: hidden;
   position: relative;
 }
+
 ol, ul {
   list-style: none;
 }

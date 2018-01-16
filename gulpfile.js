@@ -41,6 +41,7 @@ var path = {
             'node_modules/owl.carousel/dist/assets/owl.theme.default.css',
             'node_modules/font-awesome/css/font-awesome.min.css',
             'resources/assets/css/style.scss',
+            'resources/assets/css/admin-page.scss',
             'resources/assets/css/*.css'
         ],
         img: [

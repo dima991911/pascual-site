@@ -49,13 +49,7 @@
                 <div class="col-sm-8 header-navigation">
                     <nav class="">
                         <a href="#about" data-scroll class="header-navigation__item">PARKING</a>
-                        <a href="#service" data-scroll class="header-navigation__item">
-                            @if(Session::get('lg') == 'en')
-                                Yes
-                            @else
-                                SERVICES
-                            @endif
-                        </a>
+                        <a href="#service" data-scroll class="header-navigation__item">{{ $lg['services'] }}</a>
                         <a href="#selling" data-scroll class="header-navigation__item">VENTA</a>
                         <a href="#contact" data-scroll class="header-navigation__item">CONTACTOS</a>
                     </nav>

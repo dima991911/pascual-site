@@ -1,0 +1,68 @@
+@import "template/color";
+
+@import "config/config";
+@import "template/feedback-form";
+
+body {
+  background: $dark-blue;
+}
+
+.login {
+  &-back {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: $gray;
+    font-size: 40px;
+
+    a {
+      color: $gray;
+
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+
+  &-form {
+    position: absolute;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-auth {
+    padding: 20px;
+    background: $gray;
+    border: 2px solid $orange;
+
+    &-form {
+      &__btn {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.auth-error {
+  margin-bottom: 10px;
+  text-align: center;
+  color: red;
+}
+
+@media screen and(max-width: 768px) {
+  .login {
+    &-form {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and(max-width: 550px) {
+  .login {
+    &-form {
+      width: 80%;
+    }
+  }
+}

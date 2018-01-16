@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 
 class FormController extends Controller
 {
+    /*--------------Send email---------------*/
     public function submitEmail(Request $request)
     {
         Mail::to('dimon4uk.ds@gmail.com')->send(new FeedbackForm($request));
