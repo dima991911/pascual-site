@@ -14,119 +14,35 @@
         <div class="container">
             <div class="row selling-section">
                 <h3 class="selling-section__h3">VENTA DE CARAVANAS</h3>
-                <div class="col-md-6 selling-caravan-margin">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan1.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
+
+                @if($caravanas)
+                    @foreach($caravanas as $key=>$caravan)
+
+                        <div class="col-md-6 selling-caravan-margin @if($key > 3) selling-caravan__none @endif">
+                            <div class="selling-caravan">
+                                <div class="selling-caravan-avatar">
+                                    <img src="storage/{{ $caravan->avatar }}" class="selling-caravan__img" alt="Caravan">
+                                    <h6>{{ $caravan->name }}</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 selling-price">{{ $caravan->price }} &#8364;</div>
+                                    <div class="col-xs-5"><div class="selling-details show-details" data-url="{{ route('caravan.detail', ['id' => $caravan->id]) }}">DETAILS</div></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details" data-id="1">DETAILS</div></div>
-                        </div>
+
+                    @endforeach
+                @endif
+
+                @if(count($caravanas) > 4)
+
+                    <div class="col-md-12 selling-more">
+                        <button class="selling-more__btn">
+                            Ver mas
+                        </button>
                     </div>
-                </div>
-                <div class="col-md-6 selling-caravan-margin">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan2.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details" data-id="2">DETAILS</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 selling-caravan-margin">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan3.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details">DETAILS</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 selling-caravan-margin">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan3.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details">DETAILS</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 selling-caravan-margin selling-caravan__none">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan2.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details">DETAILS</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 selling-caravan-margin selling-caravan__none">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan1.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details">DETAILS</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 selling-caravan-margin selling-caravan__none">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan1.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details">DETAILS</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 selling-caravan-margin selling-caravan__none">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan1.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details">DETAILS</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 selling-caravan-margin selling-caravan__none">
-                    <div class="selling-caravan">
-                        <div class="selling-caravan-avatar">
-                            <img src="assets/img/caravan1.jpg" class="selling-caravan__img" alt="Caravan">
-                            <h6>CARAVANA HOBBY</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-7 selling-price">2.000 &#8364;</div>
-                            <div class="col-xs-5"><div class="selling-details show-details">DETAILS</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 selling-more">
-                    <button class="selling-more__btn">
-                        Ver mas
-                    </button>
-                </div>
+
+                @endif
             </div>
         </div>
     </section>

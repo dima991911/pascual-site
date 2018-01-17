@@ -8,7 +8,7 @@
 
         <div class="modal-price"><!--Name and Price-->
             <div class="row">
-                <div class="col-xs-6"><h4>CARAVANA HOBBY</h4></div>
+                <div class="col-xs-6 modal-price__name"><h4>CARAVANA HOBBY</h4></div>
                 <div class="col-xs-6 modal-price__price">2008 &#8364;</div>
             </div>
         </div>

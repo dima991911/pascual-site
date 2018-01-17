@@ -65,14 +65,16 @@ var Module = (function () {
         });
     };
 
-    /*------------------------See mode Caravan for selling---------------------*/
+    /*------------------------See more Caravan for selling---------------------*/
     var moreCaravan = function () {
-        var caravanHide = $('.selling-caravan__none');
+        var caravanHide = $('.selling-caravan__none'),
+            btn = $('.selling-more__btn');
 
         for(var i = 0; i < 4; i++) {
             if(caravanHide[i]) {
                 $(caravanHide[i]).removeClass('selling-caravan__none');
             } else {
+                btn.hide();
                 break;
             }
         }
@@ -88,10 +90,11 @@ var Module = (function () {
 
         if (state.hasClass(hamburgerIcon)) {
             state.removeClass(hamburgerIcon).addClass(closeIcon);
-            nav.css('display', 'block');
+            nav.show(200);
         } else {
             state.removeClass(closeIcon).addClass(hamburgerIcon);
-            nav.css('display', 'none');
+            /*nav.css('display', 'none');*/
+            nav.hide(200);
         }
     };
 
@@ -103,7 +106,7 @@ var Module = (function () {
             close = 'fa-times';
 
         hamburgerIcon.removeClass(close).addClass(hamburger);
-        navMenu.css('display', 'none');
+        navMenu.hide(200);
     };
 
     /*------------Mobile Menu hide to lg-device------------*/

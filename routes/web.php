@@ -52,13 +52,20 @@ Route::post('/check-user', [
     'as' => 'check.user'
 ]);
 
+Route::get('/caravan/{id}', [
+    'uses' => 'HomeController@getCaravanDetail',
+    'as' => 'caravan.detail'
+]);
+
 Route::group(['moddleware' => 'auth'], function () {
 
+    // Get admin panel
     Route::get('/admin-panel', [
         'uses' => 'AdminController@getPanel',
         'as' => 'admin.panel'
     ]);
 
+    // Logout
     Route::get('/logout', [
         'uses' => 'AdminController@logout',
         'as' => 'logout'

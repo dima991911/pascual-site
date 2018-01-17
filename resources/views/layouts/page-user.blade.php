@@ -18,17 +18,17 @@
 
         @include('includes.services') {{--Our Services--}}
 
-        @yield('caravanSelling')
+        @yield('caravanSelling') {{--Caravan Sellinh section--}}
 
-        @include('includes.contact')
+        @include('includes.contact') {{--Contact Section--}}
 
-        @include('includes.gallery')
+        @include('includes.gallery') {{--Gallery section--}}
 
-        @include('includes.modal-window')
+        @include('includes.modal-window') {{--Modal window(Detail Caravan)--}}
 
     </div>
 
-    @include('includes.footer')
+    @include('includes.footer') {{--Footer--}}
 
     @yield('scripts')
 </body>

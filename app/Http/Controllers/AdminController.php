@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -35,6 +36,7 @@ class AdminController extends Controller
     {
         Auth::logout();
 
+        Storage::disk('local')->put('file.txt', 'Contest');
         return redirect()->route('login');
     }
 }

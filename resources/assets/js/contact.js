@@ -10,7 +10,7 @@ var Contact = (function () {
         $(document).ready(function () {
             if ($('.auth-error')) {
                 setTimeout(function () {
-                    $('.auth-error').hide();
+                    $('.auth-error').hide(300);
                 }, 3000)
             }
         });

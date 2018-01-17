@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Caravana;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -13,6 +14,7 @@ class HomeController extends Controller
     /*------------Get index page---------------*/
     public function index()
     {
+        $caravans = Caravana::orderBy('created_at', 'desc')->get();
 
         if(!Session::has('lg'))
         {
@@ -29,8 +31,16 @@ class HomeController extends Controller
             ];
         }
 
-        /*dd(Session::all());*/
-        return view('welcome', ['lg' => $lg]);
+        return view('welcome', ['lg' => $lg, 'caravanas' => $caravans]);
+    }
+
+    /*-------------------Caravan Details----------------------*/
+    public function getCaravanDetail($id)
+    {
+        $caravana = Caravana::find($id);
+        $caravana->images = Caravana::find($id)->images;
+
+        return response()->json($caravana, 200);
     }
 
     /*-------------Change language-----------------*/

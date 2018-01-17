@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateColumnUser extends Migration
+class CreateColumnCaravanas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateColumnUser extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->rememberToken();
+        Schema::table('caravanas', function (Blueprint $table){
+            $table->string('avatar');
         });
     }
 
@@ -25,8 +25,8 @@ class CreateColumnUser extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('remember_token');
+        Schema::table('caravanas', function (Blueprint $table) {
+            $table->dropColumn('avatar');
         });
     }
 }
