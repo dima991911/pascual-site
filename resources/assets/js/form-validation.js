@@ -21,10 +21,12 @@ var validationForm = (function () {
             error = $(element).parent().find('.feedback-group__error');
 
         if( !pattern.test($(input).val()) ) {
-            $(error).removeClass('feedback-group__none');
+            /*$(error).removeClass('feedback-group__none')*/
+            $(error).show(200);
             return false;
         } else {
-            $(error).addClass('feedback-group__none');
+            /*$(error).addClass('feedback-group__none');*/
+            $(error).hide(200);
             return true;
         }
     };

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Caravana;
+use App\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -25,7 +28,9 @@ class AdminController extends Controller
     public function getPanel()
     {
         if(Auth::check()) {
-            return view('admin-panel');
+            $caravanas  = Caravana::orderBy('created_at', 'desc')->get();
+
+            return view('admin-panel', ['caravanas' => $caravanas]);
         }
 
         return redirect()->route('login');
@@ -38,5 +43,74 @@ class AdminController extends Controller
 
         Storage::disk('local')->put('file.txt', 'Contest');
         return redirect()->route('login');
+    }
+
+    /*----------------Add caravan with image and data---------------*/
+    public function addCaravana(Request $request)
+    {
+
+        if(Auth::check()) {
+            $caravana = new Caravana();
+            $caravana->name = $request->name;
+            $caravana->price = $request->price;
+            $caravana->type = $request->type;
+            $caravana->model = $request->model;
+            $caravana->length = $request->length;
+            $caravana->year = $request->year;
+            $caravana->description = $request->description;
+            $caravana->avatar = 'Dima';
+
+            if (!$caravana->save()) {
+                return response()->json(['error' => false], 400);
+            }
+
+            $photos = $request->file('images');
+
+            for($i = 0; $i < count($photos); $i++)
+            {
+                $photo = $photos[$i];
+                $path = $photo->store('', 'local');
+
+                if($i == 0) {
+                    $caravana->avatar = $path;
+                }
+
+                $img = new Image();
+                $img->caravan_id = $caravana->id;
+                $img->path = $path;
+                $img->save();
+            }
+
+            if(!$caravana->update()) {
+                return response()->json(['error' => false], 400);
+            }
+
+            return response()->json(null, 200);
+        }
+
+        return response()->json(['error' => 'Unauthorized'], 401);
+    }
+
+    /*----------------Delete Caravana-----------------*/
+    public function deleteCaravana($id)
+    {
+        $caravana = Caravana::where('id', $id)->first();
+        $images = Image::where('caravan_id', $id)->get();
+        $imageArr = [];
+
+        if ($caravana && Auth::check()) {
+            $caravana->delete();
+
+            foreach ($images as $image) {
+                $imageArr[] = $image->path;
+                $image->delete();
+            }
+
+            Storage::delete($imageArr);
+
+            return redirect()->route('admin.panel')->with('goodDelete', 'Caravana Delete');
+        }
+
+        return redirect()->route('index');
     }
 }

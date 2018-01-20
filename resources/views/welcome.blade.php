@@ -15,13 +15,13 @@
             <div class="row selling-section">
                 <h3 class="selling-section__h3">VENTA DE CARAVANAS</h3>
 
-                @if($caravanas)
+                @if(count($caravanas) > 0)
                     @foreach($caravanas as $key=>$caravan)
 
                         <div class="col-md-6 selling-caravan-margin @if($key > 3) selling-caravan__none @endif">
                             <div class="selling-caravan">
-                                <div class="selling-caravan-avatar">
-                                    <img src="storage/{{ $caravan->avatar }}" class="selling-caravan__img" alt="Caravan">
+                                <div class="selling-caravan-avatar" style="background-image: url('storage/{{ $caravan->avatar }}')">
+                                    {{--<img src="storage/{{ $caravan->avatar }}" class="selling-caravan__img" alt="Caravan">--}}
                                     <h6>{{ $caravan->name }}</h6>
                                 </div>
                                 <div class="row">
@@ -32,7 +32,10 @@
                         </div>
 
                     @endforeach
+                @else
+                    <h3 class="selling-caravan__no">There are no caravans at this time</h3>
                 @endif
+
 
                 @if(count($caravanas) > 4)
 

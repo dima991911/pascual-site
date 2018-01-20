@@ -37,6 +37,8 @@ class HomeController extends Controller
     /*-------------------Caravan Details----------------------*/
     public function getCaravanDetail($id)
     {
+        sleep(1);
+
         $caravana = Caravana::find($id);
         $caravana->images = Caravana::find($id)->images;
 

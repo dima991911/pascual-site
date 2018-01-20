@@ -14,6 +14,13 @@
     width: 80%;
     margin: 0 auto;
 
+    &__no {
+      text-align: center;
+      font-size: 30px;
+      text-transform: uppercase;
+      color: $orange;
+    }
+
     &-margin {
       margin-bottom: 50px;
     }
@@ -24,12 +31,18 @@
 
     &-avatar {
       position: relative;
-      max-height: 200px;
+      height: 250px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      max-height: 250px;
       overflow: hidden;
       cursor: pointer;
 
       img {
+        margin: 0 auto;
         width: 100%;
+        height: auto;
       }
 
       h6 {

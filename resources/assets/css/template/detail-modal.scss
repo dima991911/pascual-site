@@ -51,6 +51,22 @@
     background: $gray;
     color: $dark-blue;
 
+    &-container {
+      display: none;
+    }
+
+    &-load {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      img {
+        height: 40px;
+      }
+    }
+
     &__close {
       color: $orange;
       position: absolute;
@@ -118,9 +134,9 @@
 #owl-demo .item img {
   display: block;
   width: auto;
+  max-height: 350px;
   height: auto;
-  min-height: 400px;
-  max-height: 400px;
+  min-height: 150px;
   margin: 0 auto;
   border-radius: 5px;
 }

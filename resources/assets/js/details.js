@@ -34,21 +34,27 @@ var DetailsModal = (function () {
         });*/
 
 
-
-
         var modalWindow = $('.modal-details'),
             body = $('body'),
             url = $(e.target).attr('data-url');
+
+        function beforeSend() {
+            var load = $('.modal-content-load');
+
+            load.show();
+        };
         
         function createCaravanInfo(res) {
             var image = res.images,
+                load = $('.modal-content-load'),
+                caravanInfo = $('.modal-content-container'),
                 name = $('.modal-price__name'),
                 price = $('.modal-price__price'),
                 type = $('.modal-info-item__type'),
                 marca = $('.modal-info-item__marca'),
                 year = $('.modal-info-item__year'),
                 lenght = $('.modal-info-item__lenght'),
-                description = $('.modal-info-description');
+                description = $('.modal-info-description p');
 
             for(var i = 0; i < image.length; i++) {
                 $('#owl-demo').trigger('add.owl.carousel', [`<div class="item"><img src="storage/${image[i].path}" alt="Caravana"></div>`]).trigger('refresh.owl.carousel');
@@ -61,11 +67,15 @@ var DetailsModal = (function () {
             price.text(res.price + ' €');
             description.text(res.description);
             lenght.text(res.length + " M");
+
+            load.hide();
+            caravanInfo.show(100);
         };
 
             $.ajax({
                 url: url,
                 method: 'GET',
+                beforeSend: beforeSend,
                 success: createCaravanInfo
             });
 
@@ -76,6 +86,7 @@ var DetailsModal = (function () {
     /*------------------Hide Modal Window Details Caravan---------------------*/
     var hideModal = function () {
         var modalWindow = $('.modal-details'),
+            caravanInfo = $('.modal-content-container'),
             owlItem = $('#owl-demo .item').length,
             body = $('body');
 
@@ -84,12 +95,14 @@ var DetailsModal = (function () {
         }
 
         body.removeClass('lock');
+        caravanInfo.hide();
         modalWindow.css('display', 'none');
     };
 
     /*------------------Hide Modal Window Details Caravan(Click to background)--------------------*/
     var hideModalBg = function (e) {
         var modalWindow = $('.modal-details'),
+            caravanInfo = $('.modal-content-container'),
             owlItem = $('#owl-demo .item').length,
             body = $('body');
 
@@ -99,6 +112,7 @@ var DetailsModal = (function () {
             }
 
             body.removeClass('lock');
+            caravanInfo.hide();
             modalWindow.css('display', 'none');
         };
     };

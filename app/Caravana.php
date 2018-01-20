@@ -10,4 +10,7 @@ class Caravana extends Model
     {
         return $this->hasMany('App\Image', 'caravan_id');
     }
+
+    protected $table = 'caravanas';
+
 }

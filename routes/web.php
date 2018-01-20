@@ -70,4 +70,16 @@ Route::group(['moddleware' => 'auth'], function () {
         'uses' => 'AdminController@logout',
         'as' => 'logout'
     ]);
+
+    // Add Caravana
+    Route::post('/add-caravana', [
+        'uses' => 'AdminController@addCaravana',
+        'as' => 'add.caravana'
+    ]);
+
+    // Delete Caravana
+    Route::get('/delete-caravana/{id}', [
+        'uses' => 'AdminController@deleteCaravana',
+        'as' => 'delete.caravana'
+    ]);
 });

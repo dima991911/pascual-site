@@ -8,9 +8,9 @@
     <title>Login</title>
     <link rel="stylesheet" href={{ asset("assets/css/bootstrap.min.css") }}>
     <link rel="stylesheet" href={{ asset("assets/css/font-awesome.min.css") }}>
-    <link rel="stylesheet" href={{ asset("assets/css/admin-page.css") }}>
+    <link rel="stylesheet" href={{ asset("assets/css/login.css") }}>
 </head>
-<body style="position: static">
+<body>
 
     {{----------------Button back to index--------------------}}
     <div class="login-back">

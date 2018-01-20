@@ -1,0 +1,159 @@
+@import "template/color";
+
+@import "config/config";
+@import "template/feedback-form";
+
+body {
+  background: $gray;
+}
+
+.logout {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  z-index: 1005;
+
+  a {
+    color: $orange;
+  }
+}
+
+/*----------------Add new Caravana----------------*/
+.caravan-add {
+  margin-top: 20px;
+  h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: $dark-blue;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:after {
+      display: block;
+      margin-top: 5px;
+      content: "";
+      height: 3px;
+      width: 60px;
+      background: $orange;
+    }
+  }
+
+  &-ul {
+    padding: 15px;
+    width: 100%;
+    min-height: 200px;
+    background: white;
+    border: 1px solid $dark-blue;
+
+    li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+  }
+
+  &-img {
+    margin: 15px 0;
+  }
+
+  &__delete {
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__error {
+    color: red;
+    display: none;
+
+    &-need {
+      color: red;
+      display: none;
+    }
+  }
+}
+
+/*--------------Delete Caravan--------------*/
+.caravan-delete {
+  background: $dark-blue;
+  padding: 50px 0;
+
+  h2 {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 20px;
+    color: $gray;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:after {
+      display: block;
+      margin-top: 5px;
+      content: "";
+      height: 3px;
+      width: 60px;
+      background: $orange;
+    }
+  }
+
+  &-info {
+    margin-bottom: 20px;
+    border: 1px solid $dark-blue;
+    border-radius: 10px;
+    background: $gray;
+    padding: 10px;
+    box-shadow: 0px 0px 15px 1px rgba(41,41,41,1);
+
+    &__avatar {
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        max-height: 150px;
+      }
+    }
+
+    &-details {
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+
+      &__item {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__key {
+        font-weight: normal;
+      }
+    }
+
+  }
+  
+  &__btn {
+    cursor: pointer;
+    color: red;
+    text-transform: uppercase;
+
+    &:hover {
+      color: red;
+    }
+
+    &:visited {
+      color: red;
+    }
+  }
+
+  &__complete {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
