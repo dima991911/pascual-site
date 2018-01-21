@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Artisan;
 
 /*Route::group(['middleware' => ['web']], function () {
 
@@ -82,4 +83,8 @@ Route::group(['moddleware' => 'auth'], function () {
         'uses' => 'AdminController@deleteCaravana',
         'as' => 'delete.caravana'
     ]);
+});
+
+Route::get('/migration', function () {
+    Artisan::call('storage:link');
 });

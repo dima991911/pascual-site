@@ -22,8 +22,7 @@ var AddCaravan = (function () {
 
     /*---------------Change file input(Add photo)----------------*/
     var addPhotos = function () {
-        var files = this.files,
-            images = $('.caravan-add-ul');
+        var files = this.files;
 
         if (this.files.length > 0) {
             Array.prototype.forEach.call(this.files, function (elem) {
@@ -88,13 +87,8 @@ var AddCaravan = (function () {
         if (!validate || !lengthDes || !hasImages) {
             return false;
         } else {
-            var checkForm = formSubmit();
+            formSubmit();
 
-            if(!checkForm) {
-                console.log(checkForm);
-            }
-
-            location.reload();
         }
 
     };
@@ -103,7 +97,8 @@ var AddCaravan = (function () {
     var formSubmit = function () {
         var form = $('.caravan-add-form'),
             url = form.attr('data-url'),
-            formDate = new FormData(form[0]);
+            formDate = new FormData(form[0]),
+            respone;
 
         /*formDate.images = allImage;*/
 
@@ -124,9 +119,13 @@ var AddCaravan = (function () {
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             success: function (mes) {
-                return mes;
+                if(mes) {
+                    location.reload();
+                }
             }
         })
+
+        return respone;
     };
 
     return {

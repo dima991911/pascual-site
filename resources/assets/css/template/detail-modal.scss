@@ -40,6 +40,11 @@
     z-index: 1007;
   }
 
+  &-owl-carousel {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   &-content {
     overflow-x: hidden;
     overflow-y: auto;
@@ -131,17 +136,15 @@
 
 // Carousel Modal window
 
-#owl-demo .item img {
+/*#owl-demo .item img {
   display: block;
-  width: auto;
-  max-height: 350px;
+  width: 100%;
   height: auto;
-  min-height: 150px;
+  max-height: 350px;
   margin: 0 auto;
   border-radius: 5px;
-}
+}*/
 
 #owl-demo .item {
-  overflow: hidden;
   border-radius: 5px;
 }

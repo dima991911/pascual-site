@@ -61,7 +61,7 @@
 
                             <div class="col-md-6">
                                 <ul class="caravan-add-ul">
-
+                                    <li class="caravan-add-item">Photo<span class="caravan-add__delete"><i class="fa fa-trash" aria-hidden="true"></i></span></li>
                                 </ul>
 
                                 <div class="caravan-add-img">

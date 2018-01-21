@@ -59,10 +59,7 @@ class AdminController extends Controller
             $caravana->year = $request->year;
             $caravana->description = $request->description;
             $caravana->avatar = 'Dima';
-
-            if (!$caravana->save()) {
-                return response()->json(['error' => false], 400);
-            }
+            $caravana->save();
 
             $photos = $request->file('images');
 
@@ -81,11 +78,9 @@ class AdminController extends Controller
                 $img->save();
             }
 
-            if(!$caravana->update()) {
-                return response()->json(['error' => false], 400);
-            }
+            $caravana->update();
 
-            return response()->json(null, 200);
+            return response()->json(['caravana' => $caravana], 200);
         }
 
         return response()->json(['error' => 'Unauthorized'], 401);

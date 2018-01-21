@@ -21,8 +21,10 @@
 
             <div class="row"> <!--Slider-->
                 <div class="col-xs-12">
-                    <div id="owl-demo" class="owl-carousel owl-theme">
-                        <!--Modal window slider-->
+                    <div class="modal-owl-carousel">
+                        <div id="owl-demo" class="owl-carousel owl-theme">
+                            <!--Modal window slider-->
+                        </div>
                     </div>
                 </div>
             </div>

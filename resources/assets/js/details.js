@@ -8,7 +8,7 @@ var DetailsModal = (function () {
         $('.show-details').click(showModal);
         $('.modal-content__close').click(hideModal);
         $('.modal-details').click(hideModalBg);
-        $('#owl-demo').owlCarousel({
+        owl.owlCarousel({
             navigation: true, // Show next and prev buttons
             slideSpeed: 300,
             paginationSpeed: 400,
@@ -16,9 +16,17 @@ var DetailsModal = (function () {
             margin: 30,
             loop: true,
             autoHeight: true,
-            dots: true
+            dots: true,
+            responsive : {
+                480 : { items : 1  }, // from zero to 480 screen width 4 items
+                768 : { items : 1  }, // from 480 screen widthto 768 6 items
+                1024 : { items : 1   // from 768 screen width to 1024 8 items
+                }
+            },
         });
     };
+
+    var owl = $('#owl-demo');
 
     /*-------------------Show Modal Window Details Caravan--------------------*/
     var showModal = function (e) {
@@ -57,7 +65,7 @@ var DetailsModal = (function () {
                 description = $('.modal-info-description p');
 
             for(var i = 0; i < image.length; i++) {
-                $('#owl-demo').trigger('add.owl.carousel', [`<div class="item"><img src="storage/${image[i].path}" alt="Caravana"></div>`]).trigger('refresh.owl.carousel');
+                owl.trigger('add.owl.carousel', [`<div class="item"><img src="storage/${image[i].path}" alt="Caravana"></div>`]);
             }
 
             type.text(res.type);
@@ -69,6 +77,7 @@ var DetailsModal = (function () {
             lenght.text(res.length + " M");
 
             load.hide();
+            owl.trigger('refreshed.owl.carousel');
             caravanInfo.show(100);
         };
 
@@ -91,7 +100,7 @@ var DetailsModal = (function () {
             body = $('body');
 
         for(var i = 0; i < owlItem; i++) {
-            $('#owl-demo').trigger('remove.owl.carousel', [i]).trigger('refresh.owl.carousel');
+            owl.trigger('remove.owl.carousel', [i]);
         }
 
         body.removeClass('lock');
@@ -108,7 +117,7 @@ var DetailsModal = (function () {
 
         if($(e.target).hasClass('modal-details')) {
             for(var i = 0; i < owlItem; i++) {
-                $('#owl-demo').trigger('remove.owl.carousel', [i]).trigger('refresh.owl.carousel');
+                owl.trigger('remove.owl.carousel', [i]);
             }
 
             body.removeClass('lock');
