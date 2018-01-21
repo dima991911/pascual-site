@@ -9,6 +9,7 @@
     <link rel="stylesheet" href={{ asset("assets/css/bootstrap.min.css") }}>
     <link rel="stylesheet" href={{ asset("assets/css/font-awesome.min.css") }}>
     <link rel="stylesheet" href={{ asset("assets/css/login.css") }}>
+    <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
 

@@ -118,8 +118,12 @@ var AddCaravan = (function () {
             data: formDate,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                $('.caravan-add__load').show(100);
+            },
             success: function (mes) {
                 if(mes) {
+                    $('.caravan-add__load').hide();
                     location.reload();
                 }
             }

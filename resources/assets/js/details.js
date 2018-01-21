@@ -71,7 +71,7 @@ var DetailsModal = (function () {
             type.text(res.type);
             marca.text(res.model);
             year.text(res.year);
-            name.text(res.name);
+            name.text(res.name.toUpperCase());
             price.text(res.price + ' €');
             description.text(res.description);
             lenght.text(res.length + " M");

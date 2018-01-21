@@ -73,6 +73,10 @@ var Module = (function () {
         for(var i = 0; i < 4; i++) {
             if(caravanHide[i]) {
                 $(caravanHide[i]).removeClass('selling-caravan__none');
+
+                if(!caravanHide[i+1]) {
+                    btn.hide();
+                }
             } else {
                 btn.hide();
                 break;

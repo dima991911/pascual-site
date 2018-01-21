@@ -7,6 +7,7 @@
     <link rel="stylesheet" href={{ asset("assets/css/owl.theme.default.css") }}>
     <link rel="stylesheet" href={{ asset("assets/css/jquery.fancybox.css") }}>
     <link rel="stylesheet" href={{ asset("assets/css/style.css") }}>
+    <link rel="icon" type="image/png" href="favicon.png" />
 @endsection
 
 @section('caravanSelling')

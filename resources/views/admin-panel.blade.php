@@ -4,11 +4,12 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/admin-panel.css') }}">
+    <link rel="icon" type="image/png" href="favicon.png" />
 @endsection
 
 @section('caravanas')
     <div class="logout">
-        <a href="{{ route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+        <a href="{{ route('index') }}"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
     </div>
 
 
@@ -23,33 +24,33 @@
                             <div class="col-md-6">
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="^[a-zA-Z ]+$" name="name" placeholder="Nombre" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Please write your name correct</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="name" placeholder="Nombre" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Need name caravana</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="^[a-zA-Z ]+$" name="type" placeholder="Type Caravana" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Please write your name correct</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="type" placeholder="Type Caravana" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Need type caravana</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="^\d{4,6}$" name="price" placeholder="Price" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Please write your name correct</p>
+                                    <input type="text" data-pattern="^\d{4,}$" name="price" placeholder="Price" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Write your price</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="[A-Za-z0-9]{6,}" name="model" placeholder="Model caravana" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Please write your name correct</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="model" placeholder="Model caravana" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Please write model</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="^\d{1,6}$" name="year" placeholder="Year" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Please write your name correct</p>
+                                    <input type="text" data-pattern="^\d{4,4}$" name="year" placeholder="Year" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Graduation year (Four digits)</p>
                                 </div>
 
                                 <div class="feedback-group">
                                     <input type="text" data-pattern="^\d{1,20}$" name="length" placeholder="Length caravana" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Please write your name correct</p>
+                                    <p class="feedback-group__error feedback-group__none">Caravana length</p>
                                 </div>
 
                                 <div class="feedback-group">
@@ -61,7 +62,7 @@
 
                             <div class="col-md-6">
                                 <ul class="caravan-add-ul">
-                                    <li class="caravan-add-item">Photo<span class="caravan-add__delete"><i class="fa fa-trash" aria-hidden="true"></i></span></li>
+
                                 </ul>
 
                                 <div class="caravan-add-img">
@@ -77,8 +78,9 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-offset-9 col-md-3">
                                 <div class="feedback-group feedback-btn">
+                                    <img src="{{ asset('assets/img/load-caravan.gif') }}" alt="load" class="caravan-add__load">
                                     <input type="submit" value="ADD CARAVAN" class="feedback-group__btn">
                                 </div>
                             </div>
@@ -106,7 +108,7 @@
                 <div class="col-md-12 caravan-delete-info">
                     <div class="row">
                         <div class="col-md-3 caravan-delete-info__avatar">
-                            <img src="storage/{{ $caravana->avatar }}" alt="Caravan avatar">
+                            <img src="{{ asset('storage/' . $caravana->avatar) }}" alt="Caravan avatar">
                         </div>
                         <div class="col-md-4 caravan-delete-info-details">
                             <div class="caravan-delete-info-details__item">
@@ -134,8 +136,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-offset-3 col-md-2">
-                            <a href="{{ route('delete.caravana', ['id' => $caravana->id]) }}" class="caravan-delete__btn">Delete</a>
+                        <div class="col-md-5">
+                            <div class="caravan-delete-item">
+                                <a href="{{ route('delete.caravana', ['id' => $caravana->id]) }}" class="caravan-delete__btn"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
