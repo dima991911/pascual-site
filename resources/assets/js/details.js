@@ -9,9 +9,7 @@ var DetailsModal = (function () {
         $('.modal-content__close').click(hideModal);
         $('.modal-details').click(hideModalBg);
         owl.owlCarousel({
-            navigation: true, // Show next and prev buttons
             slideSpeed: 300,
-            paginationSpeed: 400,
             items: 1,
             margin: 30,
             loop: true,
@@ -23,7 +21,22 @@ var DetailsModal = (function () {
                 1024 : { items : 1   // from 768 screen width to 1024 8 items
                 }
             },
+            onInitialized: fixOwl,
+            onRefreshed: fixOwl
         });
+    };
+
+    var fixOwl = function(){
+        var $stage = $('.owl-stage'),
+            stageW = $stage.width(),
+            $el = $('.owl-item'),
+            elW = 0;
+        $el.each(function() {
+            elW += $(this).width()+ +($(this).css("margin-right").slice(0, -2))
+        });
+        if ( elW > stageW ) {
+            $stage.width( elW );
+        };
     };
 
     var owl = $('#owl-demo');
@@ -65,7 +78,7 @@ var DetailsModal = (function () {
                 description = $('.modal-info-description p');
 
             for(var i = 0; i < image.length; i++) {
-                owl.trigger('add.owl.carousel', [`<div class="item"><img src="storage/${image[i].path}" alt="Caravana"></div>`]);
+                owl.trigger('add.owl.carousel', [`<div class="item"><img src="storage/${image[i].path}" alt="Caravana"></div>`]).trigger('refreshed.owl.carousel');
             }
 
             type.text(res.type);
@@ -77,7 +90,6 @@ var DetailsModal = (function () {
             lenght.text(res.length + " M");
 
             load.hide();
-            owl.trigger('refreshed.owl.carousel');
             caravanInfo.show(100);
         };
 

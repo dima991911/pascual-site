@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-7 selling-price">{{ $caravan->price }} &#8364;</div>
-                                    <div class="col-xs-5"><div class="selling-details show-details" data-url="{{ route('caravan.detail', ['id' => $caravan->id]) }}">DETAILS</div></div>
+                                    <div class="col-xs-5"><div class="selling-details show-details" data-url="{{ route('caravan.detail', ['id' => $caravan->id]) }}">DETAILES</div></div>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
 
                     <div class="col-md-12 selling-more">
                         <button class="selling-more__btn">
-                            Ver mas
+                            VER MÁS
                         </button>
                     </div>
 

@@ -7,24 +7,24 @@
                 <h2 class="services-block__h2">SERVICIO DE PARKING CARAVANING PASCUAL</h2>
                 <div class="col-md-6 service-item">
                     <div>
-                        <img src="assets/img/caravan_service.jpg" alt="Caravan" class="service-item__img">
+                        <img src="assets/img/caravan_outside.jpg" alt="Caravan" class="service-item__img">
                     </div>
                     <h4 class="service-item__name">
-                        PARKING EXTERIOR
+                        PARKING <span class="service-item__bold">EXTERIOR</span>
                     </h4>
                     <div class="row">
-                        <div class="col-xs-7 service-bottom__price">250 &#8364/ano</div>
-                        <div class="col-xs-5 service-bottom__btn"><div class="selling-details show-gallery">GALERIA</div></div>
+                        <div class="col-xs-7 service-bottom__price">250 &#8364/año</div>
+                        <div class="col-xs-5 service-bottom__btn"><div class="selling-details service-item__outside">GALERIA</div></div>
                     </div>
                 </div>
                 <div class="col-md-6 service-item">
-                    <img src="assets/img/caravan_service.jpg" alt="Caravan" class="service-item__img">
+                    <img src="assets/img/caravan_inside.jpg" alt="Caravan" class="service-item__img">
                     <h4 class="service-item__name">
-                        PARKING EXTERIOR
+                        PARKING <span class="service-item__bold">INTERIOR</span>
                     </h4>
                     <div class="row">
-                        <div class="col-xs-7 service-bottom__price">250 &#8364/ano</div>
-                        <div class="col-xs-5 service-bottom__btn"><div class="selling-details show-gallery">GALERIA</div></div>
+                        <div class="col-xs-7 service-bottom__price">500 &#8364/año</div>
+                        <div class="col-xs-5 service-bottom__btn"><div class="selling-details service-item__inside">GALERIA</div></div>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="col-md-offset-6 col-md-6">
                     <header class="we-header">
                         <h3>PORQUE NOSOTROS</h3>
-                        <span>EL PRESIO INCLUYE</span>
+                        <span>EL PRECIO INCLUYE</span>
                     </header>
                     <div class="we-item">  <!--block for preferer-->
                         <div class="row">

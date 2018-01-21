@@ -3,6 +3,11 @@
     font-size: 13px;
   }
 
+  .logo-mobile {
+    display: block;
+    z-index: 1001;
+  }
+
   .services-block {
     padding: 15px 5px;
   }
@@ -23,5 +28,11 @@
 
   .carousel {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 300px){
+  html {
+    font-size: 11px;
   }
 }

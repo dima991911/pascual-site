@@ -10,9 +10,14 @@ var Module = (function () {
         $('.hamburger-icon').click(menuHamburger);
         $('.mobile-nav-item').click(menuMobileItem);
         $('.selling-more__btn').click(moreCaravan);
-        $('.show-gallery').click(clickGallery);
+        $('.service-item__outside').click(clickGalleryOutside);
+        $('.service-item__inside').click(clickGalleryInside);
         scrollInit();
-        $('.fancybox').fancybox({
+        $('.fancybox-inside').fancybox({
+            openEffect	: 'none',
+            closeEffect	: 'none'
+        });
+        $('.fancybox-outside').fancybox({
             openEffect	: 'none',
             closeEffect	: 'none'
         });
@@ -131,9 +136,16 @@ var Module = (function () {
         var scroll =  new SmoothScroll('a[href*="#"]');
     };
 
-    /*----------------Click Gallery-------------*/
-    var clickGallery = function () {
-        var gallery = $('.gallery a')[0];
+    /*----------------Click Gallery Inside-------------*/
+    var clickGalleryInside = function () {
+        var gallery = $('.gallery-inside a')[0];
+
+        $(gallery).trigger('click');
+    };
+
+    /*----------------Click Gallery Outside-------------*/
+    var clickGalleryOutside = function () {
+        var gallery = $('.gallery-outside a')[0];
 
         $(gallery).trigger('click');
     };

@@ -6,6 +6,14 @@
   min-height: 500px;
 }
 
+/*-----------------logo-mobile-----------------*/
+.logo-mobile {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: none;
+}
+
 .header {
   $padding: 10px;
   $width_img: 40px;

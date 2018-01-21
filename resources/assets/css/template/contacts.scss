@@ -23,6 +23,11 @@
       font-size: 18px;
       color: $dark-blue;
       line-height: 1.5;
+      transition: 1s;
+
+      a:hover {
+        color: $orange;
+      }
     }
   }
 

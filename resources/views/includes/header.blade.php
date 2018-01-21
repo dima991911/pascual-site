@@ -21,6 +21,12 @@
     </div>
 </header>
 
+{{--------------------Logo for mobile---------------------}}
+
+<div class="logo-mobile">
+    <img src="{{ asset('assets/img/logo.png') }}" alt="">
+</div>
+
 <!-------------------Hamburger icon------------------>
 
 <div class="hamburger-icon">

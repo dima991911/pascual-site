@@ -54,15 +54,15 @@
                         <p class="feedback-group__error feedback-group__none">Please write your name correct</p>
                     </div>
                     <div class="feedback-group">
-                        <input type="text" data-pattern="^\d{9,13}$" name="phone" placeholder="Telefono" class="feedback-group__input">
+                        <input type="text" data-pattern="^\d{9,13}$" name="phone" placeholder="Número de teléfono" class="feedback-group__input">
                         <p class="feedback-group__error feedback-group__none">Please write your phone correct</p>
                     </div>
                     <div class="feedback-group">
-                        <input type="text" data-pattern="(^$|^.*@.*\..*$)" name="email" placeholder="Correo electronico" class="feedback-group__input">
+                        <input type="text" data-pattern="(^$|^.*@.*\..*$)" name="email" placeholder="Correo electrónico" class="feedback-group__input">
                         <p class="feedback-group__error feedback-group__none">Incorrect email</p>
                     </div>
 
-                    <textarea cols="30" rows="5" class="feedback-group__input" name="message" placeholder="Mensaje"></textarea>
+                    <textarea cols="30" rows="5" class="feedback-group__input" name="message" placeholder="Comentarion"></textarea>
 
                     <div class="feedback-group feedback-btn">
                         <input type="submit" value="ENVIAR" class="feedback-group__btn">

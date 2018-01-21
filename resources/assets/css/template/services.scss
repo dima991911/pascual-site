@@ -28,6 +28,10 @@
       top: 10%;
       transform: translateX(-50%);
     }
+
+    &__bold {
+      font-weight: bolder;
+    }
   }
 
   &-bottom {

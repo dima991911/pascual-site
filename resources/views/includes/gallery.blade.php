@@ -1,12 +1,18 @@
 {{------------------------Gallery parking------------------------}}
-<div class="gallery">
-    <a class="fancybox" rel="gallery1" href="assets/img/nature.jpeg">
-        <img src="assets/img/nature.jpeg" alt="" />
+<div class="gallery gallery-inside">
+    <a class="fancybox-inside" rel="gallery1" href="assets/img/inside_1.jpg">
+        <img src="assets/img/inside_1.jpg" alt="" />
     </a>
-    <a class="fancybox" rel="gallery1" href="assets/img/nature2.jpg">
-        <img src="assets/img/nature2.jpg" alt="" />
+    <a class="fancybox-inside" rel="gallery1" href="assets/img/inside_2.jpg">
+        <img src="assets/img/inside_2.jpg" alt="" />
     </a>
-    <a class="fancybox" rel="gallery1" href="assets/img/nature3.jpg">
-        <img src="assets/img/nature3.jpg" alt="" />
+</div>
+
+<div class="gallery gallery-outside">
+    <a class="fancybox-outside" rel="gallery1" href="assets/img/outside_1.jpg">
+        <img src="assets/img/outside_1.jpg" alt="" />
+    </a>
+    <a class="fancybox-outside" rel="gallery1" href="assets/img/outside_2.jpg">
+        <img src="assets/img/outside_2.jpg" alt="" />
     </a>
 </div>
