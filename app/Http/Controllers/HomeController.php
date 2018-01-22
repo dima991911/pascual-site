@@ -18,7 +18,7 @@ class HomeController extends Controller
 
         if(!Session::has('lg'))
         {
-            Session::put('lg', 'en');
+            Session::put('lg', 'es');
         }
 
         if (Session::get('lg') == 'en') {

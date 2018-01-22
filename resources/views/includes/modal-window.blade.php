@@ -46,7 +46,7 @@
                         </div>
                         <div class="modal-info-item">
                             <div class="row">
-                                <div class="col-md-6 col-sm-6 modal-info-item__name">AÑO DE FABRICACIÓN:</div>
+                                <div class="col-md-6 col-sm-6 modal-info-item__name">AÑO:</div>
                                 <div class="col-md-4 col-sm-6 modal-info-item__value modal-info-item__year">2008</div>
                             </div>
                         </div>

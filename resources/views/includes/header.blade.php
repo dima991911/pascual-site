@@ -41,6 +41,13 @@
         <a href="#service" data-scroll class="mobile-nav-item">SERVICIO</a>
         <a href="#selling" data-scroll class="mobile-nav-item">VENTA</a>
         <a href="#contact" data-scroll class="mobile-nav-item">CONTACTOS</a>
+        <a href="{{ route('change.language') }}" data-scroll class="mobile-nav-item">
+            @if(Session::get('lg') == 'en')
+                ESP
+            @else
+                ENG
+            @endif
+        </a>
     </nav>
 </div>
 

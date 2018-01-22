@@ -1,6 +1,11 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   html {
     font-size: 15px;
+  }
+
+  .logo-mobile {
+    display: block;
+    z-index: 1001;
   }
 
   .section-top {

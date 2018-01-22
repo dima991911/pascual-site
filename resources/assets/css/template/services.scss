@@ -21,6 +21,7 @@
     }
 
     &__name {
+      width: 100%;
       position: absolute;
       font-size: 24px;
       text-align: center;
@@ -38,6 +39,8 @@
     &__price {
       font-size: 30px;
       text-align: center;
+      min-height: 40px;
+      line-height: 40px;
     }
 
     &__btn {
@@ -60,4 +63,8 @@
 
 .gallery {
   display: none;
+}
+
+.fancybox-nav span {
+  visibility: visible;
 }
