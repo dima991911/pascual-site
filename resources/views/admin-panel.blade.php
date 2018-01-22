@@ -24,38 +24,33 @@
                             <div class="col-md-6">
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="name" placeholder="Nombre" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Need name caravana</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="name" placeholder="Marca (Hobby, Tabbert, Adria etc...)" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Marca</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="type" placeholder="Type Caravana" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Need type caravana</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="model" placeholder="Modelo (Ontour, Rossini, Alpina etc...)" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Modelo</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="^\d{4,}$" name="price" placeholder="Price" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Write your price</p>
+                                    <input type="text" data-pattern="^\d{4,4}$" name="year" placeholder="Año (de fabricación)" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Año(4 simbolos)</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="model" placeholder="Model caravana" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Please write model</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="length" placeholder="Tamaño (5.5 m. longitud, anchura, peso etc...)" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Tamaño</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="^\d{4,4}$" name="year" placeholder="Year" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Graduation year (Four digits)</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="price" placeholder="Precio" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Precio</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="^\d{1,20}$" name="length" placeholder="Length caravana" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Caravana length</p>
-                                </div>
-
-                                <div class="feedback-group">
-                                    <textarea name="description" class="feedback-group__textarea" placeholder="Description" cols="30" rows="10"></textarea>
-                                    <p class="feedback-group__error feedback-group__none">Description is empty</p>
+                                    <textarea name="description" class="feedback-group__textarea" placeholder="Descripción (apariencia, condición etc...)" cols="30" rows="10"></textarea>
+                                    <p class="feedback-group__error feedback-group__none">Descripción</p>
                                 </div>
 
                             </div>
@@ -74,7 +69,7 @@
                                 </div>
 
                                 <div class="caravan-add__error-need">
-                                    Need one image
+                                    Al menos una foto
                                 </div>
 
                             </div>

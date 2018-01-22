@@ -53,7 +53,6 @@ class AdminController extends Controller
             $caravana = new Caravana();
             $caravana->name = $request->name;
             $caravana->price = $request->price;
-            $caravana->type = $request->type;
             $caravana->model = $request->model;
             $caravana->length = $request->length;
             $caravana->year = $request->year;

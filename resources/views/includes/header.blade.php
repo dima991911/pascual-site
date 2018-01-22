@@ -8,14 +8,20 @@
             </div>
             <div class="col-sm-8 header-navigation">
                 <nav class="nav-fixed">
-                    <a href="#about" data-scroll class="header-navigation__item">PARKING</a>
-                    <a href="#service" data-scroll class="header-navigation__item">SERVICIO</a>
-                    <a href="#selling" data-scroll class="header-navigation__item">VENTA</a>
-                    <a href="#contact" data-scroll class="header-navigation__item">CONTACTOS</a>
+                    <a href="#about" data-scroll class="header-navigation__item">{{ $lg->header['parking'] }}</a>
+                    <a href="#service" data-scroll class="header-navigation__item">{{ $lg->header['services'] }}</a>
+                    <a href="#selling" data-scroll class="header-navigation__item">{{ $lg->header['selling'] }}</a>
+                    <a href="#contact" data-scroll class="header-navigation__item">{{ $lg->header['contacts'] }}</a>
                 </nav>
             </div>
             <div class="col-sm-2 header-language">
-                <a href="#" class="header-language__a">ESP</a>
+                <a href="{{ route('change.language') }}" class="header-language__a">
+                    @if(Session::get('lg') == 'en')
+                        ESP
+                    @else
+                        ENG
+                    @endif
+                </a>
             </div>
         </div>
     </div>
@@ -24,7 +30,7 @@
 {{--------------------Logo for mobile---------------------}}
 
 <div class="logo-mobile">
-    <img src="{{ asset('assets/img/logo.png') }}" alt="">
+    <img src="{{ asset('assets/img/logo.png') }}" alt="Logo">
 </div>
 
 <!-------------------Hamburger icon------------------>
@@ -37,10 +43,10 @@
 
 <div class="mobile-menu">
     <nav class="mobile-nav">
-        <a href="#about" data-scroll class="mobile-nav-item">PARKING</a>
-        <a href="#service" data-scroll class="mobile-nav-item">SERVICIO</a>
-        <a href="#selling" data-scroll class="mobile-nav-item">VENTA</a>
-        <a href="#contact" data-scroll class="mobile-nav-item">CONTACTOS</a>
+        <a href="#about" data-scroll class="mobile-nav-item">{{ $lg->header['parking'] }}</a>
+        <a href="#service" data-scroll class="mobile-nav-item">{{ $lg->header['services'] }}</a>
+        <a href="#selling" data-scroll class="mobile-nav-item">{{ $lg->header['selling'] }}</a>
+        <a href="#contact" data-scroll class="mobile-nav-item">{{ $lg->header['contacts'] }}</a>
         <a href="{{ route('change.language') }}" data-scroll class="mobile-nav-item">
             @if(Session::get('lg') == 'en')
                 ESP
@@ -61,10 +67,10 @@
                 </div>
                 <div class="col-sm-8 header-navigation">
                     <nav class="">
-                        <a href="#about" data-scroll class="header-navigation__item">PARKING</a>
-                        <a href="#service" data-scroll class="header-navigation__item">{{ $lg['services'] }}</a>
-                        <a href="#selling" data-scroll class="header-navigation__item">VENTA</a>
-                        <a href="#contact" data-scroll class="header-navigation__item">CONTACTOS</a>
+                        <a href="#about" data-scroll class="header-navigation__item">{{ $lg->header['parking'] }}</a>
+                        <a href="#service" data-scroll class="header-navigation__item">{{ $lg->header['services'] }}</a>
+                        <a href="#selling" data-scroll class="header-navigation__item">{{ $lg->header['selling'] }}</a>
+                        <a href="#contact" data-scroll class="header-navigation__item">{{ $lg->header['contacts'] }}</a>
                     </nav>
                 </div>
                 <div class="col-sm-2 header-language">
@@ -84,7 +90,7 @@
             <div class="row">
                 <div class="col-md-offset-1 col-md-11">
                     <h2 class="name__h2">
-                        PARKING CARAVANING<br><span class="name__h2-big">PASCUAL</span>
+                        {{ $lg->header['name'] }}<br><span class="name__h2-big">{{ $lg->header['name_firm'] }}</span>
                     </h2>
                 </div>
             </div>

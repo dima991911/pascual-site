@@ -14,7 +14,7 @@
     <section class="selling" id="selling">
         <div class="container">
             <div class="row selling-section">
-                <h3 class="selling-section__h3">VENTA DE CARAVANAS</h3>
+                <h3 class="selling-section__h3">{{ $lg->selling['header'] }}</h3>
 
                 @if(count($caravanas) > 0)
                     @foreach($caravanas as $key=>$caravan)
@@ -27,14 +27,14 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-7 selling-price">{{ $caravan->price }} &#8364;</div>
-                                    <div class="col-xs-5"><div class="selling-details show-details" data-url="{{ route('caravan.detail', ['id' => $caravan->id]) }}">DETAILES</div></div>
+                                    <div class="col-xs-5"><div class="selling-details show-details" data-url="{{ route('caravan.detail', ['id' => $caravan->id]) }}">{{ $lg->selling['details'] }}</div></div>
                                 </div>
                             </div>
                         </div>
 
                     @endforeach
                 @else
-                    <h3 class="selling-caravan__no">There are no caravans at this time</h3>
+                    <h3 class="selling-caravan__no">{{ $lg->errors['no_caravan'] }}</h3>
                 @endif
 
 
@@ -42,7 +42,7 @@
 
                     <div class="col-md-12 selling-more">
                         <button class="selling-more__btn">
-                            VER MÁS
+                            {{ $lg->selling['more'] }}
                         </button>
                     </div>
 

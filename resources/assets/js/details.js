@@ -47,7 +47,6 @@ var DetailsModal = (function () {
                 owlItem = $('#owl-demo .item').length,
                 name = $('.modal-price__name'),
                 price = $('.modal-price__price'),
-                type = $('.modal-info-item__type'),
                 marca = $('.modal-info-item__marca'),
                 year = $('.modal-info-item__year'),
                 lenght = $('.modal-info-item__lenght'),
@@ -77,13 +76,12 @@ var DetailsModal = (function () {
                 owl.trigger('add.owl.carousel', [`<div class="item"><img src="storage/${image[i].path}" alt="Caravana"></div>`]);
             }
 
-            type.text(res.type);
             marca.text(res.model);
             year.text(res.year);
             name.text(res.name.toUpperCase());
             price.text(res.price + ' €');
             description.text(res.description);
-            lenght.text(res.length + " M");
+            lenght.text(res.length);
 
             load.hide();
             caravanInfo.show(100);

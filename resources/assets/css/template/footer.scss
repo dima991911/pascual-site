@@ -5,5 +5,14 @@
   &-copyright {
     font-size: 15px;
     line-height: 50px;
+
+    a {
+      color: $gray;
+      font-style: italic;
+
+      &:hover {
+        color: $gray;
+      }
+    }
   }
 }

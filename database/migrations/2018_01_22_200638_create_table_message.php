@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCaravanasTable extends Migration
+class CreateTableMessage extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateCaravanasTable extends Migration
      */
     public function up()
     {
-        Schema::create('caravanas', function (Blueprint $table) {
+        Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('price');
-            $table->string('type');
-            $table->string('model');
-            $table->integer('year');
-            $table->integer('length');
-            $table->text('description');
+            $table->integer('phone');
+            $table->string('email')->nullable();
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class CreateCaravanasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('caravanas');
+        Schema::dropIfExists('messages');
     }
 }

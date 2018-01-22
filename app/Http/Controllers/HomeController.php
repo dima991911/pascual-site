@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Caravana;
+use App\Language;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -21,14 +22,10 @@ class HomeController extends Controller
             Session::put('lg', 'es');
         }
 
-        if (Session::get('lg') == 'en') {
-            $lg = [
-                'services' => 'SERVICES'
-            ];
+        if (Session::get('lg') == 'es') {
+            $lg = new Language(false);
         } else {
-            $lg = [
-                'services' => 'SERVICIO'
-            ];
+            $lg = new Language(true);
         }
 
         return view('welcome', ['lg' => $lg, 'caravanas' => $caravans]);

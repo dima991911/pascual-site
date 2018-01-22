@@ -31,34 +31,28 @@
 
             <div class="modal-info"> <!--Info to Caravan-->
                 <div class="row">
-                    <div class="col-md-7 col-sm-12 ">
+                    <div class="col-md-7 col-sm-12">
                         <div class="modal-info-item">
                             <div class="row">
-                                <div class="col-md-6 col-sm-6 modal-info-item__name">TIPO DE VEHÍCULO:</div>
-                                <div class="col-md-4 col-sm-6 modal-info-item__value modal-info-item__type">Autocaravana</div>
-                            </div>
-                        </div>
-                        <div class="modal-info-item">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 modal-info-item__name">MARCA:</div>
+                                <div class="col-md-6 col-sm-6 modal-info-item__name">{{ $lg->modal_window['model'] }}:</div>
                                 <div class="col-md-4 col-sm-6 modal-info-item__value modal-info-item__marca">KNAUS</div>
                             </div>
                         </div>
                         <div class="modal-info-item">
                             <div class="row">
-                                <div class="col-md-6 col-sm-6 modal-info-item__name">AÑO:</div>
+                                <div class="col-md-6 col-sm-6 modal-info-item__name">{{ $lg->modal_window['year'] }}:</div>
                                 <div class="col-md-4 col-sm-6 modal-info-item__value modal-info-item__year">2008</div>
                             </div>
                         </div>
                         <div class="modal-info-item">
                             <div class="row">
-                                <div class="col-md-6 col-sm-6 modal-info-item__name">LONGITUD:</div>
-                                <div class="col-md-4 col-sm-6 modal-info-item__value modal-info-item__lenght">Autocaravana</div>
+                                <div class="col-md-6 col-sm-6 modal-info-item__name">{{ $lg->modal_window['size'] }}:</div>
+                                <div class="col-md-4 col-sm-6 modal-info-item__value modal-info-item__lenght">8</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-5 col-sm-12 modal-info-description">
-                        <h5>Description</h5>
+                        <h5>{{ $lg->modal_window['description'] }}</h5>
                         <p>
                             Lorem 2 ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque deleniti eligendi, illo iusto magni nisi nulla perspiciatis rem sapiente! Commodi deserunt laudantium nulla quo sunt. Aspernatur expedita explicabo iste odit saepe sequi temporibus! Aperiam doloremque earum eos explicabo nostrum praesentium quasi quisquam! Minima nisi obcaecati, repellat rerum tempore temporibus.
                         </p>
