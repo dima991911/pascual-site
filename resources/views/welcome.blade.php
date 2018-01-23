@@ -7,6 +7,7 @@
     <link rel="stylesheet" href={{ asset("assets/css/owl.theme.default.css") }}>
     <link rel="stylesheet" href={{ asset("assets/css/jquery.fancybox.css") }}>
     <link rel="stylesheet" href={{ asset("assets/css/style.css") }}>
+    <link rel="stylesheet" href={{ asset("assets/css/animate.css") }}>
     <link rel="icon" type="image/png" href="favicon.png" />
 @endsection
 
@@ -56,8 +57,8 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.fancybox.pack.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/bpopup.js"></script>
     <script src="assets/js/smooth-scroll.min.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/form-validation.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6OteSbFlfYJ3CmJQxQXoPmFBJadNwwIk&callback=Module.initMap"></script>
     <script src="assets/js/main.js"></script>

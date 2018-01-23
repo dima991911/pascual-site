@@ -30,6 +30,8 @@ class FormController extends Controller
 
         $msg->save();
 
+        mail('dimon4uk.ds@gmail.com', 'Subject', 'Dima');
+
         Mail::to('dimon4uk.ds@gmail.com')->send(new FeedbackForm($request));
         return redirect()->route('index');
     }

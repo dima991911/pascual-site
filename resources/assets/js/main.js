@@ -21,6 +21,20 @@ var Module = (function () {
             openEffect	: 'none',
             closeEffect	: 'none'
         });
+        wowAnimate();
+    };
+
+    /*---------------Animate scroll---------------*/
+    var wowAnimate = function () {
+        ScrollReveal().reveal('.animate_left', {
+            origin: 'left',
+            distance: '20%',
+            mobile: true,
+            scale: 0.5,
+            duration: 1000
+        });
+
+
     };
 
     /*---------Google Map----------*/

@@ -32,6 +32,7 @@ var path = {
             'node_modules/smooth-scroll/dist/js/smooth-scroll.min.js',
             'node_modules/owl.carousel/dist/owl.carousel.min.js',
             'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
+            'node_modules/scrollreveal/dist/scrollreveal.min.js',
             'resources/assets/js/*.js'
         ],
         style: [

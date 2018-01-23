@@ -9,39 +9,39 @@
             <div class="col-md-6 col-xs-12">
                 <div class="contact-item">
                     <div class="row">
-                        <div class="col-xs-2 contact-item__icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="col-xs-2 contact-item__icon animate_left"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
                         <div class="col-xs-10 contact-item__text">17258, L’Estartit (Girona), Spain <br>
                             <span class="text_italica">42.047711"N 3.174757"E</span></div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="row">
-                        <div class="col-xs-2 contact-item__icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="col-xs-2 contact-item__icon animate_left"><i class="fa fa-phone" aria-hidden="true"></i></div>
                         <div class="col-xs-10 contact-item__text"><a href="tel:+3463624338">(+34) 636 243 388</a>
                             <br><span class="text_italica">({{ $lg->contacts['spanish'] }})</span></div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="row">
-                        <div class="col-xs-2 contact-item__icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="col-xs-2 contact-item__icon animate_left"><i class="fa fa-phone" aria-hidden="true"></i></div>
                         <div class="col-xs-10 contact-item__text"><a href="tel:+34654925503">(+34) 654 925 503 </a><br><span class="text_italica">({{ $lg->contacts['english'] }})</span></div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="row">
-                        <div class="col-xs-2 contact-item__icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+                        <div class="col-xs-2 contact-item__icon animate_left"><i class="fa fa-laptop" aria-hidden="true"></i></div>
                         <div class="col-xs-10 contact-item__text"><a href="#">www.parkingcaravanaspascual.com</a></div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="row">
-                        <div class="col-xs-2 contact-item__icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                        <div class="col-xs-2 contact-item__icon animate_left"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                         <div class="col-xs-10 contact-item__text"><a href="mailto:parkingcaravanaspascual@gmail.com">parkingcaravanaspascual@gmail.com</a></div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="row">
-                        <div class="col-xs-2 contact-item__icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                        <div class="col-xs-2 contact-item__icon animate_left"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
                         <div class="col-xs-10 contact-item__text">
                             8:30h - 20:00h ({{ $lg->contacts['every'] }})</div>
                     </div>

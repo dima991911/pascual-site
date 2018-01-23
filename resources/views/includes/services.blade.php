@@ -43,7 +43,7 @@
                     </header>
                     <div class="we-item">  <!--block for preferer-->
                         <div class="row">
-                            <div class="col-xs-4 we-icon">
+                            <div class="col-xs-4 we-icon animate_left" data-wow-duration="0.3s">
                                 <img src="assets/img/reparaciones.svg" alt="icon" class="we-item__img">
                             </div>
                             <div class="col-xs-8">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="we-item">  <!--block for preferer-->
                         <div class="row">
-                            <div class="col-xs-4 we-icon">
+                            <div class="col-xs-4 we-icon animate_left" data-wow-duration="0.6s">
                                 <img src="assets/img/drop.svg" alt="icon" class="we-item__img">
                             </div>
                             <div class="col-xs-8">
@@ -69,7 +69,7 @@
                     </div>
                     <div class="we-item">  <!--block for preferer-->
                         <div class="row">
-                            <div class="col-xs-4 we-icon">
+                            <div class="col-xs-4 we-icon animate_left" data-wow-duration="0.9s">
                                 <img src="assets/img/seguro.svg" alt="icon" class="we-item__img">
                             </div>
                             <div class="col-xs-8">
@@ -82,7 +82,7 @@
                     </div>
                     <div class="we-item">  <!--block for preferer-->
                         <div class="row">
-                            <div class="col-xs-4 we-icon">
+                            <div class="col-xs-4 we-icon animate_left" data-wow-duration="1.2s">
                                 <img src="assets/img/engrase.svg" alt="icon" class="we-item__img">
                             </div>
                             <div class="col-xs-8">
@@ -95,7 +95,7 @@
                     </div>
                     <div class="we-item">  <!--block for preferer-->
                         <div class="row">
-                            <div class="col-xs-4 we-icon">
+                            <div class="col-xs-4 we-icon animate_left" data-wow-duration="1.5s">
                                 <img src="assets/img/camera.svg" alt="icon" class="we-item__img">
                             </div>
                             <div class="col-xs-8">
@@ -108,7 +108,7 @@
                     </div>
                     <div class="we-item">  <!--block for preferer-->
                         <div class="row">
-                            <div class="col-xs-4 we-icon">
+                            <div class="col-xs-4 we-icon animate_left" data-wow-duration="1.8s">
                                 <img src="assets/img/transport.svg" alt="icon" class="we-item__img">
                             </div>
                             <div class="col-xs-8">

@@ -64,8 +64,7 @@ var DetailsModal = (function () {
                     768 : { items : 1  }, // from 480 screen widthto 768 6 items
                     1024 : { items : 1   // from 768 screen width to 1024 8 items
                     }
-                },
-                lazyLoad:true
+                }
             });
 
             for(var i = 0; i < owlItem; i++) {
