@@ -62,6 +62,15 @@
                         <p class="feedback-group__error feedback-group__none">{{ $lg->errors['email'] }}</p>
                     </div>
 
+                    <div class="form-group">
+                        <select class="feedback-group__input feedback-select" name="service">
+                            <option value="" selected>Виберіть послугу</option>
+                            @foreach($services as $service)
+                                <option value="{{ $service->title }}">{{ $service->title }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <textarea cols="30" rows="5" class="feedback-group__input" name="message" placeholder="{{ $lg->contacts['coment'] }}"></textarea>
 
                     <div class="feedback-group feedback-btn">

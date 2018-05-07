@@ -33,6 +33,7 @@ var path = {
             'node_modules/owl.carousel/dist/owl.carousel.min.js',
             'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
             'node_modules/scrollreveal/dist/scrollreveal.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'resources/assets/js/*.js'
         ],
         style: [

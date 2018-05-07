@@ -60,8 +60,10 @@
     <script src="assets/js/smooth-scroll.min.js"></script>
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/form-validation.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6OteSbFlfYJ3CmJQxQXoPmFBJadNwwIk&callback=Module.initMap"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/services.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/details.js"></script>
 @endsection

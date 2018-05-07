@@ -7,18 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Language extends Model
 {
     public $global = [
-        'year' => 'año',
-        'gallery' => 'GALERIA',
-        'parking' => 'PARKING'
+        'year' => 'рік',
+        'gallery' => 'ГАЛЕРЕЯ',
+        'parking' => 'ПАРКОВКА'
     ];
 
     public $header = [
-        'parking' => 'PARKING',
-        'services' => 'SERVICIO',
-        'selling' => 'VENTA',
-        'contacts' => 'CONTACTOS',
-        'name' => 'PARKING CARAVANAS',
-        'name_firm' => 'PASCUAL'
+        'parking' => 'ПАРКИНГ',
+        'services' => 'СЕРВІСИ',
+        'selling' => 'ПРОДАЖ',
+        'contacts' => 'КОНТАКТИ',
+        'name' => 'Транспортні послуги',
+        'name_firm' => 'ПАСКАЛЬ'
     ];
 
     public $about = [
@@ -34,72 +34,72 @@ class Language extends Model
     ];
 
     public $why_we = [
-        'why_we' => 'PORQUE NOSOTROS',
-        'include' => 'EL PRECIO INCLUYE',
+        'why_we' => 'Чому саме ми  ',
+        'include' => 'В ціну включено',
         'repairs' =>[
-            'header' => 'REPARACIONES',
-            'text' => 'Hacemos reparaciones para los clientes de nuestro parking caravaning.'
+            'header' => 'Ремонт',
+            'text' => 'Ми робимо ремонт людям які орендують транспорт або купляють транспортні послуги в нас.'
         ],
         'exterior_wash' => [
-            'header' => 'LAVADO EXTERIOR',
-            'text' => 'Ofrecemos un servicio integral de lavado de toda la caravana.'
+            'header' => 'В нас є своя мийка',
+            'text' => 'Працює 24/7 включена в оренду.'
         ],
         'insurance' => [
-            'header' => 'SEGURO INCLUÍDO',
-            'text' => 'Ofrecemos un seguro incluído en todos los precios de estancia para cuando la caravana está en nuestro parking'
+            'header' => 'Страхування включено',
+            'text' => 'Ми пропонуємо страхування коли ваш транспорт знаходиться на нашій парковці'
         ],
         'lubrication' => [
-            'header' => 'ENGRASE',
-            'text' => 'Engrasamos los pies estabilizadores y todos los puntos de engrase de la caravana.'
+            'header' => 'Топливо включено',
+            'text' => 'В оренду або продаж входить повний бак пального.'
         ],
         'video' => [
-            'header' => 'CÁMARAS DE VIDEOVIGILANCIA',
-            'text' => '24 horas de videovigilancia.'
+            'header' => 'Відеонагляд',
+            'text' => '24/7 нагляд на нашій парковці за вашим транспортом.'
         ],
         'transporation' => [
-            'header' => 'TRANSPORTES',
-            'text' => 'Transportamos su caravana al camping y viceversa.'
+            'header' => 'Транспорт',
+            'text' => 'Надаємо широкий діапазон транспортних послуг.'
         ]
     ];
 
     public $selling = [
-        'header' => 'VENTA DE CARAVANAS',
-        'details' => 'DETALLES',
-        'more' => 'VER MÁS'
+        'header' => 'ПРОДАЖ ТРАНСПОРТУ',
+        'details' => 'Деталі',
+        'more' => 'Показати більше'
     ];
 
     public $modal_window = [
-        'brand' => 'MARCA',
-        'model' => 'MODELO',
-        'size' => 'TAMAÑO',
-        'price' => 'PRECIO',
-        'year' => 'AÑO',
-        'description' => 'DESCRIPCIÓN'
+        'brand' => 'Марка',
+        'model' => 'Модель',
+        'size' => 'Розмір',
+        'price' => 'Ціна',
+        'year' => 'Рік',
+        'description' => 'Опис'
     ];
 
     public $contacts = [
-        'contact' => 'CONTACTOS',
-        'location' => 'LOCALIZACIÓN',
-        'spanish' => 'en Castellano',
-        'english' => 'en Ingles',
-        'every' => 'cada dia',
-        'name' => 'Nombre',
-        'phone' => 'Número de teléfono',
-        'email' => 'Correo electrónico',
-        'coment' => 'Comentario',
-        'submit' => 'ENVIAR'
+        'contact' => 'Контакти',
+        'location' => 'Місце',
+        'spanish' => 'на іспанській',
+        'english' => 'на англійській',
+        'every' => 'кожен день',
+        'name' => 'Імя',
+        'phone' => 'Номер телефону',
+        'email' => 'пошта',
+        'coment' => 'коментарій',
+        'submit' => 'ВІДПРАВИТИ'
     ];
 
     public $footer = [
-        'copyright' => '2018 Parking Caravanas Pascual',
+        'copyright' => '2018 Транспортні послуши паскаль',
         'by' => 'skochko.net'
     ];
 
     public $errors = [
-        'name' => 'El nombre es incorrecto',
-        'phone' => 'El numero es incorrecto',
-        'email' => 'El correo electrónico es incorrecto',
-        'no_caravan' => 'NO HAY CARAVANAS EN ESTE MOMENTO'
+        'name' => 'Неправильно введене імя',
+        'phone' => 'Неправильно введено телефон',
+        'email' => 'Неправильна електронна пошта',
+        'no_caravan' => 'Немає транспорту на даний момент'
     ];
 
 

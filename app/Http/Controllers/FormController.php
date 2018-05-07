@@ -13,13 +13,15 @@ class FormController extends Controller
     public function submitEmail(Request $request)
     {
         $name = $request->input('name');
-        $phone = $request->input('phone');
+        $phone = (int)$request->input('phone');
         $email = $request->input('email');
+        $service = $request->input('service');
         $message = $request->input('message');
 
         $msg = new Message();
         $msg->name = $name;
         $msg->phone = $phone;
+        $msg->state = false;
 
         if($email) {
             $msg->email = $email;
@@ -27,12 +29,16 @@ class FormController extends Controller
         if($message) {
             $msg->message = $message;
         }
+        if($service) {
+            $msg->service = $service;
+        }
 
         $msg->save();
 
-        mail('dimon4uk.ds@gmail.com', 'Subject', 'Dima');
+        /*mail('dimon4uk.ds@gmail.com', 'Subject', 'Dima');*/
 
-        Mail::to('dimon4uk.ds@gmail.com')->send(new FeedbackForm($request));
+        /*Mail::to('dimon4uk.ds@gmail.com')->send(new FeedbackForm($request));*/
         return redirect()->route('index');
+
     }
 }

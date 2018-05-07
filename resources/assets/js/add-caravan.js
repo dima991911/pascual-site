@@ -16,6 +16,7 @@ var AddCaravan = (function () {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+        $('.change-state').click(changeStateMessage);
     };
 
     var allImage = []; // Array photos download
@@ -130,6 +131,20 @@ var AddCaravan = (function () {
         })
 
         return respone;
+    };
+    
+    var changeStateMessage = function (event) {
+        var url = $(event.target).data('url');
+        console.log($(event.target).prop('checked'));
+        console.log(url);
+
+        $.ajax({
+            method: 'GET',
+            url: url,
+            success: function (res) {
+                console.log(res);
+            }
+        })
     };
 
     return {

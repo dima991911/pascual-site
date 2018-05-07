@@ -1,4 +1,5 @@
 {{------------------------Gallery parking------------------------}}
+{{--
 <div class="gallery gallery-inside">
     <a class="fancybox-inside" rel="gallery1" href="assets/img/inside_1.jpg">
         <img src="assets/img/inside_1.jpg" alt="" />
@@ -15,4 +16,5 @@
     <a class="fancybox-outside" rel="gallery1" href="assets/img/outside_2.jpg">
         <img src="assets/img/outside_2.jpg" alt="" />
     </a>
-</div>
+</div>--}}
+

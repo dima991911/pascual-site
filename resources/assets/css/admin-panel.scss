@@ -19,6 +19,28 @@ body {
   }
 }
 
+.header {
+  padding: 20px 0;
+  background-color: $dark-blue;
+  color: $gray;
+
+  a {
+    color: $gray;
+    margin-right: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    transition: 0.2s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &-active {
+    color: $orange;
+  }
+}
+
 /*----------------Add new Caravana----------------*/
 .caravan-add {
   margin-top: 20px;
@@ -167,5 +189,35 @@ body {
     text-align: center;
     margin-bottom: 10px;
     font-size: 20px;
+  }
+}
+
+/*---------Service panel page----------*/
+
+.add-service {
+  background-color: $gray;
+  padding: 20px 0;
+
+  &__h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: $dark-blue;
+    font-weight: bold;
+  }
+}
+
+.orders {
+  background: white;
+  padding: 20px 0;
+
+  th {
+    font-weight: bold;
+  }
+
+  &__h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: $dark-blue;
+    font-weight: bold;
   }
 }

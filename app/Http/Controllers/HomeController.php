@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Caravana;
 use App\Language;
+use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -16,19 +17,20 @@ class HomeController extends Controller
     public function index()
     {
         $caravans = Caravana::orderBy('created_at', 'desc')->get();
+        $services = Service::orderBy('created_at', 'desc')->get();
 
         if(!Session::has('lg'))
         {
-            Session::put('lg', 'es');
+            Session::put('lg', 'ua');
         }
 
-        if (Session::get('lg') == 'es') {
+        if (Session::get('lg') == 'ua') {
             $lg = new Language(false);
         } else {
             $lg = new Language(true);
         }
 
-        return view('welcome', ['lg' => $lg, 'caravanas' => $caravans]);
+        return view('welcome', ['lg' => $lg, 'caravanas' => $caravans, 'services' => $services]);
     }
 
     /*-------------------Caravan Details----------------------*/
@@ -46,7 +48,7 @@ class HomeController extends Controller
         $lg = Session::get('lg');
 
         if ($lg == 'en') {
-            Session::put('lg', 'es');
+            Session::put('lg', 'ua');
         } else {
             Session::put('lg', 'en');
         }

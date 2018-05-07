@@ -17,7 +17,7 @@
             <div class="col-sm-2 header-language">
                 <a href="{{ route('change.language') }}" class="header-language__a">
                     @if(Session::get('lg') == 'en')
-                        ESP
+                        UKR
                     @else
                         ENG
                     @endif
@@ -49,7 +49,7 @@
         <a href="#contact" data-scroll class="mobile-nav-item">{{ $lg->header['contacts'] }}</a>
         <a href="{{ route('change.language') }}" data-scroll class="mobile-nav-item">
             @if(Session::get('lg') == 'en')
-                ESP
+                UKR
             @else
                 ENG
             @endif
@@ -76,7 +76,7 @@
                 <div class="col-sm-2 header-language">
                     <a href="{{ route('change.language') }}" class="header-language__a">
                         @if(Session::get('lg') == 'en')
-                            ESP
+                            UKR
                         @else
                             ENG
                         @endif

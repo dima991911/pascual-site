@@ -58,12 +58,37 @@ Route::get('/caravan/{id}', [
     'as' => 'caravan.detail'
 ]);
 
-Route::group(['moddleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () {
 
     // Get admin panel
     Route::get('/admin-panel', [
         'uses' => 'AdminController@getPanel',
         'as' => 'admin.panel'
+    ]);
+
+    Route::get('/services-panel', [
+        'uses' => 'AdminController@getServicePanel',
+        'as' => 'services.panel'
+    ]);
+
+    Route::get('/service-delete/{id}', [
+        'uses' => 'AdminController@deleteService',
+        'as' => 'delete.service'
+    ]);
+
+    Route::post('/add-service', [
+        'uses' => 'AdminController@addService',
+        'as' => 'add.service'
+    ]);
+
+    Route::get('message-panel', [
+        'uses' => 'AdminController@getMessagePanel',
+        'as' => 'message.panel'
+    ]);
+
+    Route::get('change-state/{id}', [
+        'uses' => 'AdminController@changeState',
+        'as' => 'change.state'
     ]);
 
     // Logout

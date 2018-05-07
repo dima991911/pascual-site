@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Caravana;
 use App\Image;
+use App\Message;
+use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -34,6 +36,62 @@ class AdminController extends Controller
         }
 
         return redirect()->route('login');
+    }
+
+    public function getServicePanel()
+    {
+        $services = Service::orderBy('created_at', 'desc')->get();
+
+        return view('services-panel', ['services' => $services]);
+    }
+
+    public function deleteService($id)
+    {
+        $service = Service::find($id);
+        if(Auth::check()) {
+            $service->delete();
+        }
+
+        return redirect()->route('services.panel');
+    }
+
+    public function addService(Request $request)
+    {
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $img = \Intervention\Image\Facades\Image::make($request->file('avatar'));
+        $type = explode('/', $img->mime)[1];
+        $img->fit(545, 250);
+        $path = 'storage/avatars/' . time() . '_' . '.' . $type;
+        $img->save( $path );
+
+        $service = new Service();
+        $service->title = $title;
+        $service->description = $description;
+        $service->avatar = $path;
+
+        $service->save();
+
+        return redirect()->route('services.panel');
+    }
+
+    public function getMessagePanel()
+    {
+        if(Auth::check()) {
+            $messages = Message::orderBy('state', 'asc')->orderBy('created_at', 'desc')->get();
+            return view('message-panel', ['messages' => $messages]);
+        }
+
+        return redirect()->route('login');
+    }
+
+    public function changeState($id)
+    {
+        $message = Message::find($id);
+        $message->state = !$message->state;
+        $message->update();
+
+        return response()->json(['message' => 'good'], 200);
     }
 
     /*---------Function logout---------*/

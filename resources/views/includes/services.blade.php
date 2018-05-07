@@ -1,7 +1,7 @@
 <!---------------Services------------>
 
 <div id="service">
-    <section class="services">
+    {{--<section class="services">
         <div class="container">
             <div class="row services-block">
                 <h2 class="services-block__h2">{{ $lg->services['header'] }}</h2>
@@ -29,6 +29,67 @@
                 </div>
             </div>
         </div>
+    </section>--}}
+
+    {{-----------------Specefical services---------------}}
+
+    <section class="services">
+        <div class="container">
+            <h2 class="services__h2">
+                ТРАНСПОРТНІ ПОСЛУГИ
+            </h2>
+
+            <div class="row">
+                @foreach($services as $service)
+                    <div class="col-sm-12 col-md-6">
+                        <div class="thumbnail services-thumbnail">
+                            <img src="{{ $service->avatar }}" alt="...">
+                            <div class="caption">
+                                <h3 class="services-thumbnail__h3">{{ $service->title }}</h3>
+                                <p class="services-thumbnail__p">
+                                    {{ $service->description }}
+                                </p>
+                                <button data-value="{{ $service->title }}" class="services-btn choose-service">ЗАМОВИТИ</button>
+                                <button data-value="{{ $service->title }}" class="services-btn show-more">ДЕТАЛЬНІШЕ</button>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+                {{--<div class="col-sm-6 col-md-6">
+                    <div class="thumbnail services-thumbnail">
+                        <img src="assets/img/marsh.jpg" alt="...">
+                        <div class="caption">
+                            <h3 class="services-thumbnail__h3">Bhumbnail label</h3>
+                            <p class="services-thumbnail__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <button class="services-btn">ЗАМОВИТИ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail services-thumbnail">
+                        <img src="assets/img/marsh.jpg" alt="...">
+                        <div class="caption">
+                            <h3 class="services-thumbnail__h3">Bhumbnail label</h3>
+                            <p class="services-thumbnail__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <button class="services-btn">ЗАМОВИТИ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6">
+                    <div class="thumbnail services-thumbnail">
+                        <img src="assets/img/marsh.jpg" alt="...">
+                        <div class="caption">
+                            <h3 class="services-thumbnail__h3">Bhumbnail label</h3>
+                            <p class="services-thumbnail__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <button class="services-btn">ЗАМОВИТИ</button>
+                        </div>
+                    </div>
+                </div>--}}
+            </div>
+        </div>
     </section>
 
     <!--------------Why we SECTION-------------->
@@ -42,7 +103,7 @@
                         <span>{{ $lg->why_we['include'] }}</span>
                     </header>
                     <div class="we-item">  <!--block for preferer-->
-                        <div class="row">
+                        <div class="row vcenter">
                             <div class="col-xs-4 we-icon animate_left" data-wow-duration="0.3s">
                                 <img src="assets/img/reparaciones.svg" alt="icon" class="we-item__img">
                             </div>
@@ -55,7 +116,7 @@
                         </div>
                     </div>
                     <div class="we-item">  <!--block for preferer-->
-                        <div class="row">
+                        <div class="row vcenter">
                             <div class="col-xs-4 we-icon animate_left" data-wow-duration="0.6s">
                                 <img src="assets/img/drop.svg" alt="icon" class="we-item__img">
                             </div>
@@ -68,7 +129,7 @@
                         </div>
                     </div>
                     <div class="we-item">  <!--block for preferer-->
-                        <div class="row">
+                        <div class="row vcenter">
                             <div class="col-xs-4 we-icon animate_left" data-wow-duration="0.9s">
                                 <img src="assets/img/seguro.svg" alt="icon" class="we-item__img">
                             </div>
@@ -81,7 +142,7 @@
                         </div>
                     </div>
                     <div class="we-item">  <!--block for preferer-->
-                        <div class="row">
+                        <div class="row vcenter">
                             <div class="col-xs-4 we-icon animate_left" data-wow-duration="1.2s">
                                 <img src="assets/img/engrase.svg" alt="icon" class="we-item__img">
                             </div>
@@ -94,7 +155,7 @@
                         </div>
                     </div>
                     <div class="we-item">  <!--block for preferer-->
-                        <div class="row">
+                        <div class="row vcenter">
                             <div class="col-xs-4 we-icon animate_left" data-wow-duration="1.5s">
                                 <img src="assets/img/camera.svg" alt="icon" class="we-item__img">
                             </div>
@@ -107,11 +168,10 @@
                         </div>
                     </div>
                     <div class="we-item">  <!--block for preferer-->
-                        <div class="row">
+                        <div class="row vcenter">
                             <div class="col-xs-4 we-icon animate_left" data-wow-duration="1.8s">
                                 <img src="assets/img/transport.svg" alt="icon" class="we-item__img">
-                            </div>
-                            <div class="col-xs-8">
+                            </div><div class="col-xs-8">
                                 <div class="we-item__description">
                                     <h5>{{ $lg->why_we['transporation']['header'] }}</h5>
                                     <p>{{ $lg->why_we['transporation']['text'] }}</p>

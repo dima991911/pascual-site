@@ -1,6 +1,6 @@
 var Module = (function () {
 
-    var init = function init() {
+    var init = function () {
         setupListener();
     }
 
@@ -31,7 +31,7 @@ var Module = (function () {
             distance: '20%',
             mobile: true,
             scale: 0.5,
-            duration: 1000
+            duration: 500
         });
 
 

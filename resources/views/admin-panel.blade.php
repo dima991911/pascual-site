@@ -8,49 +8,45 @@
 @endsection
 
 @section('caravanas')
-    <div class="logout">
-        <a href="{{ route('index') }}"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
-    </div>
-
 
     {{-----------------Create Caravan for selling---------------}}
     <section class="caravan-selling">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 caravan-add">
-                    <h2>Add Caravana</h2>
+                    <h2>ДОДАТИ ТРАНСПОРТ НА ПРОДАЖ</h2>
                     <form action="" class="caravan-add-form" data-url="{{ route('add.caravana') }}">
                         <div class="row">
                             <div class="col-md-6">
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="name" placeholder="Marca (Hobby, Tabbert, Adria etc...)" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Marca</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="name" placeholder="Марка " class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Марка</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="model" placeholder="Modelo (Ontour, Rossini, Alpina etc...)" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Modelo</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="model" placeholder="Модель " class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Mодель</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="^\d{4,4}$" name="year" placeholder="Año (de fabricación)" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Año(4 simbolos)</p>
+                                    <input type="text" data-pattern="^\d{4,4}$" name="year" placeholder="Рік" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Рік(4 символи)</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="length" placeholder="Tamaño (5.5 m. longitud, anchura, peso etc...)" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Tamaño</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="length" placeholder="Розмір " class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Розмір</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="price" placeholder="Precio" class="feedback-group__input">
-                                    <p class="feedback-group__error feedback-group__none">Precio</p>
+                                    <input type="text" data-pattern="([A-Za-z0-9\-\_]+)" name="price" placeholder="Ціна" class="feedback-group__input">
+                                    <p class="feedback-group__error feedback-group__none">Ціна</p>
                                 </div>
 
                                 <div class="feedback-group">
-                                    <textarea name="description" class="feedback-group__textarea" placeholder="Descripción (apariencia, condición etc...)" cols="30" rows="10"></textarea>
-                                    <p class="feedback-group__error feedback-group__none">Descripción</p>
+                                    <textarea name="description" class="feedback-group__textarea" placeholder="Опис" cols="30" rows="10"></textarea>
+                                    <p class="feedback-group__error feedback-group__none">Опис</p>
                                 </div>
 
                             </div>
@@ -69,14 +65,14 @@
                                 </div>
 
                                 <div class="caravan-add__error-need">
-                                    Al menos una foto
+                                    немає фото
                                 </div>
 
                             </div>
                             <div class="col-md-offset-9 col-md-3">
                                 <div class="feedback-group feedback-btn">
                                     <img src="{{ asset('assets/img/load-caravan.gif') }}" alt="load" class="caravan-add__load">
-                                    <input type="submit" value="ADD CARAVAN" class="feedback-group__btn">
+                                    <input type="submit" value="Добавити Транспорт" class="feedback-group__btn">
                                 </div>
                             </div>
                         </div>
@@ -91,7 +87,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 caraval-delete__h2">
-                    <h2>Delete Caravana</h2>
+                    <h2>Видалити транспорт</h2>
                 </div>
 
                 @if(session()->has('goodDelete'))
@@ -108,25 +104,25 @@
                         <div class="col-md-4 caravan-delete-info-details">
                             <div class="caravan-delete-info-details__item">
                                 <div class="row">
-                                    <div class="col-xs-6 caravan-delete-info-details__key">TIPO DE VEHÍCULO:</div>
-                                    <div class="col-xs-6 caravan-delete-info-details__value">Auto</div>
+                                    <div class="col-xs-6 caravan-delete-info-details__key">Тип Транспортного засобу:</div>
+                                    <div class="col-xs-6 caravan-delete-info-details__value">Караван</div>
                                 </div>
                             </div>
                             <div class="caravan-delete-info-details__item">
                                 <div class="row">
-                                    <div class="col-xs-6 caravan-delete-info-details__key">MARCA:</div>
+                                    <div class="col-xs-6 caravan-delete-info-details__key">Марка:</div>
                                     <div class="col-xs-6 caravan-delete-info-details__value">nissan250</div>
                                 </div>
                             </div>
                             <div class="caravan-delete-info-details__item">
                                 <div class="row">
-                                    <div class="col-xs-6 caravan-delete-info-details__key">AÑO DE FABRICACIÓN:</div>
+                                    <div class="col-xs-6 caravan-delete-info-details__key">Рік випуску:</div>
                                     <div class="col-xs-6 caravan-delete-info-details__value">1995</div>
                                 </div>
                             </div>
                             <div class="caravan-delete-info-details__item">
                                 <div class="row">
-                                    <div class="col-xs-6 caravan-delete-info-details__key">LONGITUD:</div>
+                                    <div class="col-xs-6 caravan-delete-info-details__key">Розмір:</div>
                                     <div class="col-xs-6 caravan-delete-info-details__value">7 M</div>
                                 </div>
                             </div>

@@ -10,6 +10,23 @@
     @yield('styles')
 </head>
 <body>
+    <div class="logout">
+        <a href="{{ route('index') }}"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav>
+                <a href="{{ route('admin.panel') }}" class="header-active">
+                    ТРАНСПОРТ
+                </a>
+
+                <a href="{{ route('services.panel') }}">ПОСЛУГИ</a>
+                <a href="{{ route('message.panel') }}">ЗАМОВЛЕННЯ</a>
+            </nav>
+        </div>
+    </header>
+
     @yield('caravanas')
 
     @yield('add-caravana')
