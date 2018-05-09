@@ -72,7 +72,7 @@ var DetailsModal = (function () {
             }
 
             for(var i = 0; i < image.length; i++) {
-                owl.trigger('add.owl.carousel', [`<div class="item"><img src="storage/${image[i].path}" alt="Caravana"></div>`]);
+                owl.trigger('add.owl.carousel', [`<div class="item"><img src="${image[i].path}" alt="Caravana"></div>`]);
             }
 
             marca.text(res.model);

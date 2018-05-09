@@ -9,6 +9,7 @@ use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -49,6 +50,7 @@ class AdminController extends Controller
     {
         $service = Service::find($id);
         if(Auth::check()) {
+            File::delete($service->avatar);
             $service->delete();
         }
 
@@ -122,17 +124,19 @@ class AdminController extends Controller
 
             for($i = 0; $i < count($photos); $i++)
             {
-                $photo = $photos[$i];
-                $path = $photo->store('', 'local');
+                $img = \Intervention\Image\Facades\Image::make($photos[$i]);
+                $type = explode('/', $img->mime)[1];
+                $path = 'storage/' . time() . '_' . $i . '.' . $type;
+                $img->save($path);
 
                 if($i == 0) {
                     $caravana->avatar = $path;
                 }
 
-                $img = new Image();
-                $img->caravan_id = $caravana->id;
-                $img->path = $path;
-                $img->save();
+                $imgModel = new Image();
+                $imgModel->caravan_id = $caravana->id;
+                $imgModel->path = $path;
+                $imgModel->save();
             }
 
             $caravana->update();
@@ -158,7 +162,7 @@ class AdminController extends Controller
                 $image->delete();
             }
 
-            Storage::delete($imageArr);
+            File::delete($imageArr);
 
             return redirect()->route('admin.panel')->with('goodDelete', 'Caravana Delete');
         }

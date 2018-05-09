@@ -22,7 +22,7 @@
 
                         <div class="col-md-6 selling-caravan-margin @if($key > 3) selling-caravan__none @endif">
                             <div class="selling-caravan">
-                                <div class="selling-caravan-avatar" style="background-image: url('storage/{{ $caravan->avatar }}')">
+                                <div class="selling-caravan-avatar" style="background-image: url('{{ $caravan->avatar }}')">
                                     {{--<img src="storage/{{ $caravan->avatar }}" class="selling-caravan__img" alt="Caravan">--}}
                                     <h6>{{ $caravan->name }}</h6>
                                 </div>

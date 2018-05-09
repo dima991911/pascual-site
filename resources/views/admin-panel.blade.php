@@ -99,7 +99,7 @@
                 <div class="col-md-12 caravan-delete-info">
                     <div class="row">
                         <div class="col-md-3 caravan-delete-info__avatar">
-                            <img src="{{ asset('storage/' . $caravana->avatar) }}" alt="Caravan avatar">
+                            <img src="{{ asset( $caravana->avatar) }}" alt="Caravan avatar">
                         </div>
                         <div class="col-md-4 caravan-delete-info-details">
                             <div class="caravan-delete-info-details__item">

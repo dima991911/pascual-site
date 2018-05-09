@@ -55,39 +55,6 @@
                         </div>
                     </div>
                 @endforeach
-
-                {{--<div class="col-sm-6 col-md-6">
-                    <div class="thumbnail services-thumbnail">
-                        <img src="assets/img/marsh.jpg" alt="...">
-                        <div class="caption">
-                            <h3 class="services-thumbnail__h3">Bhumbnail label</h3>
-                            <p class="services-thumbnail__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <button class="services-btn">ЗАМОВИТИ</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-6">
-                    <div class="thumbnail services-thumbnail">
-                        <img src="assets/img/marsh.jpg" alt="...">
-                        <div class="caption">
-                            <h3 class="services-thumbnail__h3">Bhumbnail label</h3>
-                            <p class="services-thumbnail__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <button class="services-btn">ЗАМОВИТИ</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-6">
-                    <div class="thumbnail services-thumbnail">
-                        <img src="assets/img/marsh.jpg" alt="...">
-                        <div class="caption">
-                            <h3 class="services-thumbnail__h3">Bhumbnail label</h3>
-                            <p class="services-thumbnail__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <button class="services-btn">ЗАМОВИТИ</button>
-                        </div>
-                    </div>
-                </div>--}}
             </div>
         </div>
     </section>
